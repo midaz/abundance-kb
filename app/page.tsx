@@ -204,6 +204,63 @@ export default function PolicyCMS() {
     }
   }
 
+  const filterConfig = {
+    type: {
+      setter: setExcludedTypes,
+      excluded: excludedTypes,
+      options: Object.keys(typeLabels),
+      labels: typeLabels,
+      icon: FileText,
+      title: "Content Type"
+    },
+    region: {
+      setter: setExcludedRegions,
+      excluded: excludedRegions,
+      options: Object.keys(regionLabels),
+      labels: regionLabels,
+      icon: MapPin,
+      title: "Region"
+    },
+    policyType: {
+      setter: setExcludedPolicyTypes,
+      excluded: excludedPolicyTypes,
+      options: Object.keys(policyTypeLabels),
+      labels: policyTypeLabels,
+      icon: Users,
+      title: "Policy Type"
+    },
+    policyArea: {
+      setter: setExcludedPolicyAreas,
+      excluded: excludedPolicyAreas,
+      options: Object.keys(policyAreaLabels),
+      labels: policyAreaLabels,
+      icon: Building,
+      title: "Policy Area"
+    },
+    year: {
+      setter: setExcludedYears,
+      excluded: excludedYears,
+      options: Array.from(new Set(policyResources.map(item => item.date.split('-')[0]))),
+      labels: {},
+      icon: Calendar,
+      title: "Year"
+    }
+  }
+
+  const handleSelectAll = (filterType: string) => {
+    const config = filterConfig[filterType as keyof typeof filterConfig]
+    if (config) {
+      config.setter([]) // Clear excluded list (show all)
+    }
+  }
+
+  const handleSelectNone = (filterType: string) => {
+    const config = filterConfig[filterType as keyof typeof filterConfig]
+    if (config) {
+      config.setter(config.options) // Add all to excluded list (hide all)
+    }
+  }
+
   const clearAllFilters = () => {
     setExcludedTypes([])
     setExcludedRegions([])
@@ -211,6 +268,57 @@ export default function PolicyCMS() {
     setExcludedPolicyAreas([])
     setExcludedYears([])
     setSearchQuery("")
+  }
+
+  // Reusable FilterSection component
+  const FilterSection = ({ filterType, sortYears = false }: { filterType: keyof typeof filterConfig, sortYears?: boolean }) => {
+    const config = filterConfig[filterType]
+    const IconComponent = config.icon
+    
+    let optionsToRender = config.options
+    if (sortYears && filterType === 'year') {
+      optionsToRender = [...config.options].sort((a, b) => parseInt(b) - parseInt(a))
+    }
+
+    return (
+      <div>
+        <div className="flex items-center justify-between mb-3">
+          <h3 className="font-semibold flex items-center gap-2">
+            <IconComponent className="w-4 h-4" />
+            {config.title}
+          </h3>
+          <div className="flex items-center gap-1 text-xs">
+            <button
+              onClick={() => handleSelectAll(filterType)}
+              className="text-accent-purple hover:text-accent-purple/80 hover:underline"
+            >
+              All
+            </button>
+            <span className="text-muted-foreground">|</span>
+            <button
+              onClick={() => handleSelectNone(filterType)}
+              className="text-accent-purple hover:text-accent-purple/80 hover:underline"
+            >
+              None
+            </button>
+          </div>
+        </div>
+        <div className="space-y-2">
+          {optionsToRender.map((value) => (
+            <div key={value} className="flex items-center space-x-2">
+              <Checkbox
+                id={`${filterType}-${value}`}
+                checked={!config.excluded.includes(value)}
+                onCheckedChange={(checked) => handleFilterChange(filterType, value, checked as boolean)}
+              />
+              <label htmlFor={`${filterType}-${value}`} className="text-sm font-medium">
+                {config.labels[value as keyof typeof config.labels] || value}
+              </label>
+            </div>
+          ))}
+        </div>
+      </div>
+    )
   }
 
   const openModal = (item: (typeof policyResources)[0]) => {
@@ -258,125 +366,15 @@ export default function PolicyCMS() {
                 </Button>
               </CardHeader>
               <CardContent className="space-y-6">
-                {/* Policy Type Filter */}
-                <div>
-                  <h3 className="font-semibold mb-3 flex items-center gap-2">
-                    <Users className="w-4 h-4" />
-                    Policy Type
-                  </h3>
-                  <div className="space-y-2">
-                    {Object.entries(policyTypeLabels).map(([value, label]) => (
-                      <div key={value} className="flex items-center space-x-2">
-                        <Checkbox
-                          id={`policy-${value}`}
-                          checked={!excludedPolicyTypes.includes(value)}
-                          onCheckedChange={(checked) => handleFilterChange("policyType", value, checked as boolean)}
-                        />
-                        <label htmlFor={`policy-${value}`} className="text-sm font-medium">
-                          {label}
-                        </label>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
+                <FilterSection filterType="policyType" />
                 <Separator />
-
-                {/* Policy Area Filter */}
-                <div>
-                  <h3 className="font-semibold mb-3 flex items-center gap-2">
-                    <Building className="w-4 h-4" />
-                    Policy Area
-                  </h3>
-                  <div className="space-y-2">
-                    {Object.entries(policyAreaLabels).map(([value, label]) => (
-                      <div key={value} className="flex items-center space-x-2">
-                        <Checkbox
-                          id={`policyarea-${value}`}
-                          checked={!excludedPolicyAreas.includes(value)}
-                          onCheckedChange={(checked) => handleFilterChange("policyArea", value, checked as boolean)}
-                        />
-                        <label htmlFor={`policyarea-${value}`} className="text-sm font-medium">
-                          {label}
-                        </label>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
+                <FilterSection filterType="policyArea" />
                 <Separator />
-
-                {/* Region Filter */}
-                <div>
-                  <h3 className="font-semibold mb-3 flex items-center gap-2">
-                    <MapPin className="w-4 h-4" />
-                    Region
-                  </h3>
-                  <div className="space-y-2">
-                    {Object.entries(regionLabels).map(([value, label]) => (
-                      <div key={value} className="flex items-center space-x-2">
-                        <Checkbox
-                          id={`region-${value}`}
-                          checked={!excludedRegions.includes(value)}
-                          onCheckedChange={(checked) => handleFilterChange("region", value, checked as boolean)}
-                        />
-                        <label htmlFor={`region-${value}`} className="text-sm font-medium">
-                          {label}
-                        </label>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
+                <FilterSection filterType="region" />
                 <Separator />
-
-                {/* Content Type Filter */}
-                <div>
-                  <h3 className="font-semibold mb-3 flex items-center gap-2">
-                    <FileText className="w-4 h-4" />
-                    Content Type
-                  </h3>
-                  <div className="space-y-2">
-                    {Object.entries(typeLabels).map(([value, label]) => (
-                      <div key={value} className="flex items-center space-x-2">
-                        <Checkbox
-                          id={`type-${value}`}
-                          checked={!excludedTypes.includes(value)}
-                          onCheckedChange={(checked) => handleFilterChange("type", value, checked as boolean)}
-                        />
-                        <label htmlFor={`type-${value}`} className="text-sm font-medium">
-                          {label}
-                        </label>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
+                <FilterSection filterType="type" />
                 <Separator />
-
-                {/* Year Filter */}
-                <div>
-                  <h3 className="font-semibold mb-3 flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
-                    Year
-                  </h3>
-                  <div className="space-y-2">
-                    {Array.from(new Set(policyResources.map(item => item.date.split('-')[0])))
-                      .sort((a, b) => parseInt(b) - parseInt(a))
-                      .map((year) => (
-                      <div key={year} className="flex items-center space-x-2">
-                        <Checkbox
-                          id={`year-${year}`}
-                          checked={!excludedYears.includes(year)}
-                          onCheckedChange={(checked) => handleFilterChange("year", year, checked as boolean)}
-                        />
-                        <label htmlFor={`year-${year}`} className="text-sm font-medium">
-                          {year}
-                        </label>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                <FilterSection filterType="year" sortYears={true} />
               </CardContent>
             </Card>
           </aside>
