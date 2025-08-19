@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useMemo, useEffect, useCallback } from "react"
-import { Search, Filter, FileText, Headphones, BookOpen, Users, MapPin, Building, X, ExternalLink } from "lucide-react"
+import { Search, Filter, FileText, Headphones, BookOpen, Users, MapPin, Building, X, ExternalLink, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -80,10 +80,12 @@ const policyAreaColors = {
 
 export default function PolicyCMS() {
   const [searchQuery, setSearchQuery] = useState("")
-  const [selectedTypes, setSelectedTypes] = useState<string[]>([])
-  const [selectedRegions, setSelectedRegions] = useState<string[]>([])
-  const [selectedPolicyTypes, setSelectedPolicyTypes] = useState<string[]>([])
-  const [selectedPolicyAreas, setSelectedPolicyAreas] = useState<string[]>([])
+  // Inverted logic: these store EXCLUDED items, not included ones
+  const [excludedTypes, setExcludedTypes] = useState<string[]>([])
+  const [excludedRegions, setExcludedRegions] = useState<string[]>([])
+  const [excludedPolicyTypes, setExcludedPolicyTypes] = useState<string[]>([])
+  const [excludedPolicyAreas, setExcludedPolicyAreas] = useState<string[]>([])
+  const [excludedYears, setExcludedYears] = useState<string[]>([])
   const [sortBy, setSortBy] = useState("date")
 
   const [displayedItems, setDisplayedItems] = useState<typeof policyResources>([])
@@ -103,13 +105,14 @@ export default function PolicyCMS() {
         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         item.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase()))
 
-      const matchesType = selectedTypes.length === 0 || selectedTypes.includes(item.type)
-      const matchesRegion = selectedRegions.length === 0 || selectedRegions.includes(item.region)
-      const matchesPolicyType = selectedPolicyTypes.length === 0 || selectedPolicyTypes.includes(item.policyType)
-      const matchesPolicyArea = selectedPolicyAreas.length === 0 || 
-        selectedPolicyAreas.every(selectedArea => item.policyAreas.includes(selectedArea))
+      // Inverted logic: item is shown unless it's excluded
+      const matchesType = !excludedTypes.includes(item.type)
+      const matchesRegion = !excludedRegions.includes(item.region)
+      const matchesPolicyType = !excludedPolicyTypes.includes(item.policyType)
+      const matchesPolicyArea = !excludedPolicyAreas.some(excludedArea => item.policyAreas.includes(excludedArea))
+      const matchesYear = !excludedYears.includes(item.date.split('-')[0])
 
-      return matchesSearch && matchesType && matchesRegion && matchesPolicyType && matchesPolicyArea
+      return matchesSearch && matchesType && matchesRegion && matchesPolicyType && matchesPolicyArea && matchesYear
     })
 
     // Sort results
@@ -127,7 +130,7 @@ export default function PolicyCMS() {
     })
 
     return filtered
-  }, [searchQuery, selectedTypes, selectedRegions, selectedPolicyTypes, selectedPolicyAreas, sortBy])
+  }, [searchQuery, excludedTypes, excludedRegions, excludedPolicyTypes, excludedPolicyAreas, excludedYears, sortBy])
 
   const loadMoreItems = useCallback(() => {
     if (isLoading || !hasMore) return
@@ -175,23 +178,26 @@ export default function PolicyCMS() {
 
   const handleFilterChange = (filterType: string, value: string, checked: boolean) => {
     const setters = {
-      type: setSelectedTypes,
-      region: setSelectedRegions,
-      policyType: setSelectedPolicyTypes,
-      policyArea: setSelectedPolicyAreas,
+      type: setExcludedTypes,
+      region: setExcludedRegions,
+      policyType: setExcludedPolicyTypes,
+      policyArea: setExcludedPolicyAreas,
+      year: setExcludedYears,
     }
 
     const setter = setters[filterType as keyof typeof setters]
     if (setter) {
-      setter((prev) => (checked ? [...prev, value] : prev.filter((item) => item !== value)))
+      // Inverted logic: checked means included (not excluded), unchecked means excluded
+      setter((prev) => (checked ? prev.filter((item) => item !== value) : [...prev, value]))
     }
   }
 
   const clearAllFilters = () => {
-    setSelectedTypes([])
-    setSelectedRegions([])
-    setSelectedPolicyTypes([])
-    setSelectedPolicyAreas([])
+    setExcludedTypes([])
+    setExcludedRegions([])
+    setExcludedPolicyTypes([])
+    setExcludedPolicyAreas([])
+    setExcludedYears([])
     setSearchQuery("")
   }
 
@@ -251,7 +257,7 @@ export default function PolicyCMS() {
                       <div key={value} className="flex items-center space-x-2">
                         <Checkbox
                           id={`policy-${value}`}
-                          checked={selectedPolicyTypes.includes(value)}
+                          checked={!excludedPolicyTypes.includes(value)}
                           onCheckedChange={(checked) => handleFilterChange("policyType", value, checked as boolean)}
                         />
                         <label htmlFor={`policy-${value}`} className="text-sm font-medium">
@@ -275,7 +281,7 @@ export default function PolicyCMS() {
                       <div key={value} className="flex items-center space-x-2">
                         <Checkbox
                           id={`policyarea-${value}`}
-                          checked={selectedPolicyAreas.includes(value)}
+                          checked={!excludedPolicyAreas.includes(value)}
                           onCheckedChange={(checked) => handleFilterChange("policyArea", value, checked as boolean)}
                         />
                         <label htmlFor={`policyarea-${value}`} className="text-sm font-medium">
@@ -299,7 +305,7 @@ export default function PolicyCMS() {
                       <div key={value} className="flex items-center space-x-2">
                         <Checkbox
                           id={`region-${value}`}
-                          checked={selectedRegions.includes(value)}
+                          checked={!excludedRegions.includes(value)}
                           onCheckedChange={(checked) => handleFilterChange("region", value, checked as boolean)}
                         />
                         <label htmlFor={`region-${value}`} className="text-sm font-medium">
@@ -323,11 +329,37 @@ export default function PolicyCMS() {
                       <div key={value} className="flex items-center space-x-2">
                         <Checkbox
                           id={`type-${value}`}
-                          checked={selectedTypes.includes(value)}
+                          checked={!excludedTypes.includes(value)}
                           onCheckedChange={(checked) => handleFilterChange("type", value, checked as boolean)}
                         />
                         <label htmlFor={`type-${value}`} className="text-sm font-medium">
                           {label}
+                        </label>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <Separator />
+
+                {/* Year Filter */}
+                <div>
+                  <h3 className="font-semibold mb-3 flex items-center gap-2">
+                    <Calendar className="w-4 h-4" />
+                    Year
+                  </h3>
+                  <div className="space-y-2">
+                    {Array.from(new Set(policyResources.map(item => item.date.split('-')[0])))
+                      .sort((a, b) => parseInt(b) - parseInt(a))
+                      .map((year) => (
+                      <div key={year} className="flex items-center space-x-2">
+                        <Checkbox
+                          id={`year-${year}`}
+                          checked={!excludedYears.includes(year)}
+                          onCheckedChange={(checked) => handleFilterChange("year", year, checked as boolean)}
+                        />
+                        <label htmlFor={`year-${year}`} className="text-sm font-medium">
+                          {year}
                         </label>
                       </div>
                     ))}
@@ -363,46 +395,57 @@ export default function PolicyCMS() {
                 </Select>
               </div>
 
-              {/* Active Filters */}
-              {(selectedTypes.length > 0 ||
-                selectedRegions.length > 0 ||
-                selectedPolicyTypes.length > 0 ||
-                selectedPolicyAreas.length > 0) && (
+              {/* Active Filters (showing excluded items) */}
+              {(excludedTypes.length > 0 ||
+                excludedRegions.length > 0 ||
+                excludedPolicyTypes.length > 0 ||
+                excludedPolicyAreas.length > 0 ||
+                excludedYears.length > 0) && (
                 <div className="flex flex-wrap gap-2">
-                  {selectedTypes.map((type) => (
+                  <span className="text-sm text-muted-foreground self-center">Hidden:</span>
+                  {excludedTypes.map((type) => (
                     <Badge
                       key={type}
                       variant="secondary"
-                      className="bg-accent-purple/20 text-accent-purple border-accent-purple/30"
+                      className="bg-red-100 text-red-800 border-red-300"
                     >
                       {typeLabels[type as keyof typeof typeLabels]}
                     </Badge>
                   ))}
-                  {selectedRegions.map((region) => (
+                  {excludedRegions.map((region) => (
                     <Badge
                       key={region}
                       variant="secondary"
-                      className="bg-accent-purple/20 text-accent-purple border-accent-purple/30"
+                      className="bg-red-100 text-red-800 border-red-300"
                     >
                       {regionLabels[region as keyof typeof regionLabels]}
                     </Badge>
                   ))}
-                  {selectedPolicyTypes.map((policy) => (
+                  {excludedPolicyTypes.map((policy) => (
                     <Badge
                       key={policy}
                       variant="secondary"
-                      className="bg-accent-purple/20 text-accent-purple border-accent-purple/30"
+                      className="bg-red-100 text-red-800 border-red-300"
                     >
                       {policyTypeLabels[policy as keyof typeof policyTypeLabels]}
                     </Badge>
                   ))}
-                  {selectedPolicyAreas.map((area) => (
+                  {excludedPolicyAreas.map((area) => (
                     <Badge
                       key={area}
                       variant="secondary"
-                      className={policyAreaColors[area as keyof typeof policyAreaColors]}
+                      className="bg-red-100 text-red-800 border-red-300"
                     >
                       {policyAreaLabels[area as keyof typeof policyAreaLabels]}
+                    </Badge>
+                  ))}
+                  {excludedYears.map((year) => (
+                    <Badge
+                      key={year}
+                      variant="secondary"
+                      className="bg-red-100 text-red-800 border-red-300"
+                    >
+                      {year}
                     </Badge>
                   ))}
                 </div>
@@ -477,7 +520,7 @@ export default function PolicyCMS() {
                             </div>
                             <div className="flex items-start justify-between text-sm text-muted-foreground leading-5">
                               <span className="leading-5">{item.author}</span>
-                              <span className="leading-5">{new Date(item.date).toLocaleDateString()}</span>
+                              <span className="leading-5">{item.date.split('-')[0]}</span>
                             </div>
                             <div className="space-y-2">
                               <div className="flex items-center gap-2 text-xs text-muted-foreground">
@@ -615,7 +658,7 @@ export default function PolicyCMS() {
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-600">Date:</span>
-                      <span className="text-gray-900">{new Date(selectedItem.date).toLocaleDateString()}</span>
+                      <span className="text-gray-900">{selectedItem.date.split('-')[0]}</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-600">Type:</span>
