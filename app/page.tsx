@@ -625,19 +625,34 @@ export default function PolicyCMS() {
               {/* Image */}
               <div className="aspect-video relative overflow-hidden rounded-lg mb-6">
                 {selectedItem.image ? (
-                  <img
-                    src={selectedItem.image}
-                    alt={selectedItem.title}
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      const img = e.target as HTMLImageElement;
-                      img.src = "/placeholder.svg";
-                    }}
-                  />
+                  <div 
+                    className="w-full h-full cursor-pointer group relative"
+                    onClick={() => selectedItem.url && window.open(selectedItem.url, '_blank')}
+                    title={selectedItem.url ? "Click to open original source" : "No source available"}
+                  >
+                    <img
+                      src={selectedItem.image}
+                      alt={selectedItem.title}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      onError={(e) => {
+                        const img = e.target as HTMLImageElement;
+                        img.src = "/placeholder.svg";
+                      }}
+                    />
+                    {selectedItem.url && (
+                      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div className="bg-white/90 rounded-full p-3">
+                          <ExternalLink className="w-6 h-6 text-gray-700" />
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 ) : (
-                  <div
-                    className="w-full h-full flex items-center justify-center"
+                  <div 
+                    className="w-full h-full flex items-center justify-center cursor-pointer group relative"
                     style={{ background: selectedItem.gradient }}
+                    onClick={() => selectedItem.url && window.open(selectedItem.url, '_blank')}
+                    title={selectedItem.url ? "Click to open original source" : "No source available"}
                   >
                     <div className="text-white text-center">
                       {(() => {
@@ -648,6 +663,13 @@ export default function PolicyCMS() {
                         {typeLabels[selectedItem.type as keyof typeof typeLabels]}
                       </div>
                     </div>
+                    {selectedItem.url && (
+                      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div className="bg-white/90 rounded-full p-3">
+                          <ExternalLink className="w-6 h-6 text-gray-700" />
+                        </div>
+                      </div>
+                    )}
                   </div>
                 )}
               </div>
