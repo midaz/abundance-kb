@@ -10,6 +10,11 @@ export const policyResources: PolicyResource[] = [
     "region": "west",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse",
+      "financing",
+      "cost"
+    ],
     "date": "2025-01-01",
     "author": "Terner Center",
     "tags": [
@@ -33,6 +38,11 @@ export const policyResources: PolicyResource[] = [
     "region": "west",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse",
+      "financing",
+      "cost"
+    ],
     "date": "2025-01-01",
     "author": "Terner Center",
     "tags": [
@@ -56,6 +66,11 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse",
+      "financing",
+      "cost"
+    ],
     "date": "2023-01-01",
     "author": "Terner Center",
     "tags": [
@@ -78,6 +93,9 @@ export const policyResources: PolicyResource[] = [
     "region": "west",
     "policyType": "housing",
     "policyArea": "financing",
+    "policyAreas": [
+      "financing"
+    ],
     "date": "2024-01-01",
     "author": "SPUR",
     "tags": [
@@ -98,6 +116,10 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "cost",
+    "policyAreas": [
+      "cost",
+      "financing"
+    ],
     "date": "2016-01-01",
     "author": "Urban Institute",
     "tags": [
@@ -121,6 +143,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "financing",
+    "policyAreas": [
+      "financing"
+    ],
     "date": "2023-01-01",
     "author": "Local Housing Solutions",
     "tags": [
@@ -141,6 +166,11 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse",
+      "financing",
+      "homelessness"
+    ],
     "date": "2025-01-01",
     "author": "Local Housing Solutions",
     "tags": [
@@ -164,6 +194,10 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse",
+      "financing"
+    ],
     "date": "2025-01-01",
     "author": "Local Housing Solutions",
     "tags": [
@@ -186,6 +220,10 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse",
+      "financing"
+    ],
     "date": "2025-01-01",
     "author": "Local Housing Solutions",
     "tags": [
@@ -209,6 +247,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "financing",
+    "policyAreas": [
+      "financing"
+    ],
     "date": "2025-01-01",
     "author": "Local Housing Solutions",
     "tags": [
@@ -229,6 +270,13 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse",
+      "rental",
+      "climate",
+      "homelessness",
+      "homeownership"
+    ],
     "date": "2025-01-01",
     "author": "Local Housing Solutions",
     "tags": [
@@ -253,6 +301,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "rental",
+    "policyAreas": [
+      "rental"
+    ],
     "date": "2025-01-01",
     "author": "Urban Institute",
     "tags": [
@@ -274,6 +325,11 @@ export const policyResources: PolicyResource[] = [
     "region": "west",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse",
+      "financing",
+      "cost"
+    ],
     "date": "2023-01-01",
     "author": "Urban Institute",
     "tags": [
@@ -298,6 +354,13 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "homeownership",
+    "policyAreas": [
+      "homeownership",
+      "rental",
+      "landuse",
+      "climate",
+      "homelessness"
+    ],
     "date": "2025-01-01",
     "author": "Joint Center for Housing Studies of Harvard",
     "tags": [
@@ -322,6 +385,12 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "rental",
+    "policyAreas": [
+      "rental",
+      "homelessness",
+      "homeownership",
+      "landuse"
+    ],
     "date": "2025-01-01",
     "author": "Joint Center for Housing Studies of Harvard",
     "tags": [
@@ -345,6 +414,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse"
+    ],
     "date": "2025-01-01",
     "author": "Strong Towns",
     "tags": [
@@ -367,6 +439,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse"
+    ],
     "date": "2025-01-01",
     "author": "Strong Towns",
     "tags": [
@@ -387,6 +462,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "rental",
+    "policyAreas": [
+      "rental"
+    ],
     "date": "2025-01-01",
     "author": "Center for Budget and Policy Priorities",
     "tags": [
@@ -408,6 +486,11 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "financing",
+    "policyAreas": [
+      "financing",
+      "cost",
+      "landuse"
+    ],
     "date": "2025-01-01",
     "author": "Urban Land Institute",
     "tags": [
@@ -432,6 +515,11 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "financing",
+    "policyAreas": [
+      "financing",
+      "rental",
+      "homeownership"
+    ],
     "date": "2025-01-01",
     "author": "Enterprise Community Partners",
     "tags": [
@@ -454,6 +542,10 @@ export const policyResources: PolicyResource[] = [
     "region": "south",
     "policyType": "housing",
     "policyArea": "rental",
+    "policyAreas": [
+      "rental",
+      "financing"
+    ],
     "date": "2025-01-01",
     "author": "Enterprise Community Partners",
     "tags": [
@@ -475,6 +567,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "homelessness",
+    "policyAreas": [
+      "homelessness"
+    ],
     "date": "2025-01-01",
     "author": "Results For America",
     "tags": [
@@ -496,6 +591,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "financing",
+    "policyAreas": [
+      "financing"
+    ],
     "date": "2025-01-01",
     "author": "Results For America",
     "tags": [
@@ -516,6 +614,13 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse",
+      "financing",
+      "cost",
+      "climate",
+      "homelessness"
+    ],
     "date": "2024-01-01",
     "author": "Results For America",
     "tags": [
@@ -540,6 +645,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse"
+    ],
     "date": "2025-01-01",
     "author": "Smart Growth America",
     "tags": [
@@ -560,6 +668,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse"
+    ],
     "date": "2021-01-01",
     "author": "Smart Growth America",
     "tags": [
@@ -580,6 +691,9 @@ export const policyResources: PolicyResource[] = [
     "region": "south",
     "policyType": "housing",
     "policyArea": "financing",
+    "policyAreas": [
+      "financing"
+    ],
     "date": "2019-01-01",
     "author": "City of Asheville",
     "tags": [
@@ -600,6 +714,9 @@ export const policyResources: PolicyResource[] = [
     "region": "midwest",
     "policyType": "housing",
     "policyArea": "financing",
+    "policyAreas": [
+      "financing"
+    ],
     "date": "2024-01-01",
     "author": "City of East Grand Rapids",
     "tags": [
@@ -620,6 +737,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "financing",
+    "policyAreas": [
+      "financing"
+    ],
     "date": "2025-01-01",
     "author": "National League of Cities",
     "tags": [
@@ -640,6 +760,10 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "rental",
+    "policyAreas": [
+      "rental",
+      "financing"
+    ],
     "date": "2025-01-01",
     "author": "National League of Cities",
     "tags": [
@@ -661,6 +785,11 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse",
+      "cost",
+      "financing"
+    ],
     "date": "2024-01-01",
     "author": "National League of Cities",
     "tags": [
@@ -683,6 +812,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse"
+    ],
     "date": "2025-01-01",
     "author": "National League of Cities",
     "tags": [
@@ -703,6 +835,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "rental",
+    "policyAreas": [
+      "rental"
+    ],
     "date": "2025-01-01",
     "author": "National League of Cities",
     "tags": [
@@ -723,6 +858,10 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "rental",
+    "policyAreas": [
+      "rental",
+      "homelessness"
+    ],
     "date": "2025-01-01",
     "author": "National League of Cities",
     "tags": [
@@ -744,6 +883,10 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "rental",
+    "policyAreas": [
+      "rental",
+      "homelessness"
+    ],
     "date": "2025-01-01",
     "author": "National League of Cities",
     "tags": [
@@ -766,6 +909,10 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "rental",
+    "policyAreas": [
+      "rental",
+      "homelessness"
+    ],
     "date": "2025-01-01",
     "author": "National League of Cities",
     "tags": [
@@ -787,6 +934,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse"
+    ],
     "date": "2025-01-01",
     "author": "Land Use Atlas",
     "tags": [
@@ -809,6 +959,10 @@ export const policyResources: PolicyResource[] = [
     "region": "west",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse",
+      "financing"
+    ],
     "date": "2025-01-01",
     "author": "Institute of Othering & Belonging  and California Department of Housing and Community Development",
     "tags": [
@@ -830,6 +984,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse"
+    ],
     "date": "2025-01-01",
     "author": "Institute of Othering & Belonging  and California Department of Housing and Community Development",
     "tags": [
@@ -850,6 +1007,10 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "rental",
+    "policyAreas": [
+      "rental",
+      "homelessness"
+    ],
     "date": "2025-01-01",
     "author": "Liberation in a Generation",
     "tags": [
@@ -871,6 +1032,9 @@ export const policyResources: PolicyResource[] = [
     "region": "northeast",
     "policyType": "housing",
     "policyArea": "financing",
+    "policyAreas": [
+      "financing"
+    ],
     "date": "2025-01-01",
     "author": "Center for Public Enterprise",
     "tags": [
@@ -891,6 +1055,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse"
+    ],
     "date": "2025-01-01",
     "author": "AEI",
     "tags": [
@@ -911,6 +1078,10 @@ export const policyResources: PolicyResource[] = [
     "region": "midwest",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse",
+      "homelessness"
+    ],
     "date": "2025-01-01",
     "author": "Housing Narrative Lab",
     "tags": [
@@ -932,6 +1103,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse"
+    ],
     "date": "2025-01-01",
     "author": "AARP",
     "tags": [
@@ -952,6 +1126,9 @@ export const policyResources: PolicyResource[] = [
     "region": "west",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse"
+    ],
     "date": "2025-01-01",
     "author": "Institute for Local Government",
     "tags": [
@@ -972,6 +1149,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse"
+    ],
     "date": "2025-01-01",
     "author": "Mercatus Center",
     "tags": [
@@ -992,6 +1172,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse"
+    ],
     "date": "2025-01-01",
     "author": "Housing + Transportation Index",
     "tags": [
@@ -1012,6 +1195,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse"
+    ],
     "date": "2025-01-01",
     "author": "Policy Map",
     "tags": [
@@ -1032,6 +1218,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "financing",
+    "policyAreas": [
+      "financing"
+    ],
     "date": "2025-01-01",
     "author": "Grounded Solutions",
     "tags": [
@@ -1052,6 +1241,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "financing",
+    "policyAreas": [
+      "financing"
+    ],
     "date": "2025-01-01",
     "author": "Bush Center",
     "tags": [
@@ -1072,6 +1264,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "financing",
+    "policyAreas": [
+      "financing"
+    ],
     "date": "2025-01-01",
     "author": "Mercatus Center",
     "tags": [
@@ -1092,6 +1287,12 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "financing",
+    "policyAreas": [
+      "financing",
+      "cost",
+      "homeownership",
+      "homelessness"
+    ],
     "date": "2025-01-01",
     "author": "Ivory Innovations + Terner Labs + Enterprise Community Partners",
     "tags": [
@@ -1115,6 +1316,10 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse",
+      "cost"
+    ],
     "date": "2025-01-01",
     "author": "Tiny Home Industry Association",
     "tags": [
@@ -1136,6 +1341,11 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse",
+      "homeownership",
+      "rental"
+    ],
     "date": "2025-01-01",
     "author": "Urban Institute",
     "tags": [
@@ -1158,6 +1368,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "financing",
+    "policyAreas": [
+      "financing"
+    ],
     "date": "2025-01-01",
     "author": "Center for public enterprise",
     "tags": [
@@ -1178,6 +1391,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse"
+    ],
     "date": "2025-01-01",
     "author": "Mercatus Center",
     "tags": [
@@ -1198,6 +1414,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse"
+    ],
     "date": "2025-01-01",
     "author": "RAND",
     "tags": [
@@ -1218,6 +1437,9 @@ export const policyResources: PolicyResource[] = [
     "region": "west",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse"
+    ],
     "date": "2025-01-01",
     "author": "Terner Center for Housing Innovation and Lewis Center for Regional Policy Studies",
     "tags": [
@@ -1238,6 +1460,10 @@ export const policyResources: PolicyResource[] = [
     "region": "west",
     "policyType": "housing",
     "policyArea": "financing",
+    "policyAreas": [
+      "financing",
+      "homelessness"
+    ],
     "date": "2025-01-01",
     "author": "Terner Center for Housing Innovation",
     "tags": [
@@ -1259,6 +1485,9 @@ export const policyResources: PolicyResource[] = [
     "region": "midwest",
     "policyType": "housing",
     "policyArea": "financing",
+    "policyAreas": [
+      "financing"
+    ],
     "date": "2025-01-01",
     "author": "Results for America",
     "tags": [
@@ -1279,6 +1508,9 @@ export const policyResources: PolicyResource[] = [
     "region": "south",
     "policyType": "housing",
     "policyArea": "financing",
+    "policyAreas": [
+      "financing"
+    ],
     "date": "2025-01-01",
     "author": "Results for America",
     "tags": [
@@ -1299,6 +1531,9 @@ export const policyResources: PolicyResource[] = [
     "region": "south",
     "policyType": "housing",
     "policyArea": "homelessness",
+    "policyAreas": [
+      "homelessness"
+    ],
     "date": "2025-01-01",
     "author": "Community Solutions",
     "tags": [
@@ -1319,6 +1554,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "homelessness",
+    "policyAreas": [
+      "homelessness"
+    ],
     "date": "2025-01-01",
     "author": "Community Solutions",
     "tags": [
@@ -1339,6 +1577,9 @@ export const policyResources: PolicyResource[] = [
     "region": "south",
     "policyType": "housing",
     "policyArea": "homelessness",
+    "policyAreas": [
+      "homelessness"
+    ],
     "date": "2025-01-01",
     "author": "Results for America",
     "tags": [
@@ -1359,6 +1600,9 @@ export const policyResources: PolicyResource[] = [
     "region": "south",
     "policyType": "housing",
     "policyArea": "homelessness",
+    "policyAreas": [
+      "homelessness"
+    ],
     "date": "2025-01-01",
     "author": "Community Solutions",
     "tags": [
@@ -1379,6 +1623,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse"
+    ],
     "date": "2025-01-01",
     "author": "Regional Plan Association",
     "tags": [
@@ -1399,6 +1646,9 @@ export const policyResources: PolicyResource[] = [
     "region": "west",
     "policyType": "housing",
     "policyArea": "cost",
+    "policyAreas": [
+      "cost"
+    ],
     "date": "2025-01-01",
     "author": "Terner Center for Housing Innovation",
     "tags": [
@@ -1419,6 +1669,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "cost",
+    "policyAreas": [
+      "cost"
+    ],
     "date": "2025-01-01",
     "author": "Center for Building in North America",
     "tags": [
@@ -1439,6 +1692,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "cost",
+    "policyAreas": [
+      "cost"
+    ],
     "date": "2025-01-01",
     "author": "Pew",
     "tags": [
@@ -1459,6 +1715,11 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse",
+      "financing",
+      "cost"
+    ],
     "date": "2025-01-01",
     "author": "National Association of Home Builders",
     "tags": [
@@ -1481,6 +1742,10 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse",
+      "climate"
+    ],
     "date": "2025-01-01",
     "author": "US Department of Housing and Urban Development",
     "tags": [
@@ -1502,6 +1767,9 @@ export const policyResources: PolicyResource[] = [
     "region": "midwest",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse"
+    ],
     "date": "2025-01-01",
     "author": "City of Chicago",
     "tags": [
@@ -1522,6 +1790,10 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse",
+      "cost"
+    ],
     "date": "2025-01-01",
     "author": "Neiman Taber",
     "tags": [
@@ -1543,6 +1815,9 @@ export const policyResources: PolicyResource[] = [
     "region": "south",
     "policyType": "housing",
     "policyArea": "financing",
+    "policyAreas": [
+      "financing"
+    ],
     "date": "2025-01-01",
     "author": "Harvard's Data-Smart City Solutions",
     "tags": [
@@ -1563,6 +1838,9 @@ export const policyResources: PolicyResource[] = [
     "region": "northeast",
     "policyType": "housing",
     "policyArea": "cost",
+    "policyAreas": [
+      "cost"
+    ],
     "date": "2025-01-01",
     "author": "City of Scranton",
     "tags": [
@@ -1583,6 +1861,9 @@ export const policyResources: PolicyResource[] = [
     "region": "midwest",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse"
+    ],
     "date": "2025-01-01",
     "author": "City of Chicago",
     "tags": [
@@ -1603,6 +1884,10 @@ export const policyResources: PolicyResource[] = [
     "region": "west",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse",
+      "cost"
+    ],
     "date": "2025-01-01",
     "author": "Building Salt Lake",
     "tags": [
@@ -1624,6 +1909,10 @@ export const policyResources: PolicyResource[] = [
     "region": "northeast",
     "policyType": "housing",
     "policyArea": "homeownership",
+    "policyAreas": [
+      "homeownership",
+      "homelessness"
+    ],
     "date": "2025-01-01",
     "author": "Local Housing Solutions",
     "tags": [
@@ -1645,6 +1934,10 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "rental",
+    "policyAreas": [
+      "rental",
+      "homelessness"
+    ],
     "date": "2025-01-01",
     "author": "Local Housing Solutions",
     "tags": [
@@ -1666,6 +1959,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "financing",
+    "policyAreas": [
+      "financing"
+    ],
     "date": "2025-01-01",
     "author": "Center on Budget and Policy Priorities",
     "tags": [
@@ -1686,6 +1982,9 @@ export const policyResources: PolicyResource[] = [
     "region": "west",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse"
+    ],
     "date": "2025-01-01",
     "author": "Terner Center for Housing Innovation",
     "tags": [
@@ -1706,6 +2005,11 @@ export const policyResources: PolicyResource[] = [
     "region": "west",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse",
+      "financing",
+      "cost"
+    ],
     "date": "2025-01-01",
     "author": "Association of Bay Area Governments",
     "tags": [
@@ -1728,6 +2032,9 @@ export const policyResources: PolicyResource[] = [
     "region": "south",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse"
+    ],
     "date": "2025-01-01",
     "author": "Shelterforce",
     "tags": [
@@ -1748,6 +2055,9 @@ export const policyResources: PolicyResource[] = [
     "region": "northeast",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse"
+    ],
     "date": "2025-01-01",
     "author": "Boston Indicators",
     "tags": [
@@ -1768,6 +2078,10 @@ export const policyResources: PolicyResource[] = [
     "region": "midwest",
     "policyType": "housing",
     "policyArea": "rental",
+    "policyAreas": [
+      "rental",
+      "financing"
+    ],
     "date": "2025-01-01",
     "author": "Brookings",
     "tags": [
@@ -1789,6 +2103,10 @@ export const policyResources: PolicyResource[] = [
     "region": "midwest",
     "policyType": "housing",
     "policyArea": "rental",
+    "policyAreas": [
+      "rental",
+      "financing"
+    ],
     "date": "2025-01-01",
     "author": "Purpose Built Communities and Growing Together",
     "tags": [
@@ -1810,6 +2128,9 @@ export const policyResources: PolicyResource[] = [
     "region": "northeast",
     "policyType": "housing",
     "policyArea": "financing",
+    "policyAreas": [
+      "financing"
+    ],
     "date": "2025-01-01",
     "author": "Joint Center for Housing Studies of Harvard University",
     "tags": [
@@ -1830,6 +2151,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "landuse",
+    "policyAreas": [
+      "landuse"
+    ],
     "date": "2025-01-01",
     "author": "Brookings",
     "tags": [
@@ -1850,6 +2174,9 @@ export const policyResources: PolicyResource[] = [
     "region": "northeast",
     "policyType": "housing",
     "policyArea": "rental",
+    "policyAreas": [
+      "rental"
+    ],
     "date": "2025-01-01",
     "author": "The Federal Reserve Bank of Minneapolis",
     "tags": [
@@ -1870,6 +2197,10 @@ export const policyResources: PolicyResource[] = [
     "region": "west",
     "policyType": "housing",
     "policyArea": "financing",
+    "policyAreas": [
+      "financing",
+      "cost"
+    ],
     "date": "2025-01-01",
     "author": "Enterprise Community",
     "tags": [
@@ -1891,6 +2222,9 @@ export const policyResources: PolicyResource[] = [
     "region": "midwest",
     "policyType": "housing",
     "policyArea": "cost",
+    "policyAreas": [
+      "cost"
+    ],
     "date": "2025-01-01",
     "author": "Minneapolis Public Housing Authority",
     "tags": [
@@ -1911,6 +2245,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "cost",
+    "policyAreas": [
+      "cost"
+    ],
     "date": "2025-01-01",
     "author": "Enterprise Community",
     "tags": [
@@ -1931,6 +2268,9 @@ export const policyResources: PolicyResource[] = [
     "region": "west",
     "policyType": "housing",
     "policyArea": "cost",
+    "policyAreas": [
+      "cost"
+    ],
     "date": "2025-01-01",
     "author": "Pew",
     "tags": [
@@ -1951,6 +2291,9 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "financing",
+    "policyAreas": [
+      "financing"
+    ],
     "date": "2025-01-01",
     "author": "Center for Public Enterprise",
     "tags": [
@@ -1971,6 +2314,9 @@ export const policyResources: PolicyResource[] = [
     "region": "west",
     "policyType": "housing",
     "policyArea": "homelessness",
+    "policyAreas": [
+      "homelessness"
+    ],
     "date": "2025-01-01",
     "author": "Local Housing Solutions",
     "tags": [
@@ -1991,6 +2337,11 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "financing",
+    "policyAreas": [
+      "financing",
+      "cost",
+      "homelessness"
+    ],
     "date": "2025-01-01",
     "author": "Enterprise Community, Ivory Innovations, Terner Labs",
     "tags": [
@@ -2013,6 +2364,11 @@ export const policyResources: PolicyResource[] = [
     "region": "national",
     "policyType": "housing",
     "policyArea": "financing",
+    "policyAreas": [
+      "financing",
+      "landuse",
+      "cost"
+    ],
     "date": "2025-01-01",
     "author": "National Housing Crisis Task Force",
     "tags": [

@@ -106,7 +106,8 @@ export default function PolicyCMS() {
       const matchesType = selectedTypes.length === 0 || selectedTypes.includes(item.type)
       const matchesRegion = selectedRegions.length === 0 || selectedRegions.includes(item.region)
       const matchesPolicyType = selectedPolicyTypes.length === 0 || selectedPolicyTypes.includes(item.policyType)
-      const matchesPolicyArea = selectedPolicyAreas.length === 0 || selectedPolicyAreas.includes(item.policyArea)
+      const matchesPolicyArea = selectedPolicyAreas.length === 0 || 
+        selectedPolicyAreas.every(selectedArea => item.policyAreas.includes(selectedArea))
 
       return matchesSearch && matchesType && matchesRegion && matchesPolicyType && matchesPolicyArea
     })

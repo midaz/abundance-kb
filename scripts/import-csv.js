@@ -64,9 +64,10 @@ function importCSV(csvPath) {
     const primaryRegion = region.split(',')[0]?.trim() || 'National';
     const mappedRegion = regionMapping[primaryRegion] || 'national';
 
-    // Extract policy areas (comma-separated)
-    const policyAreas = policyArea.split(',').map(area => area.trim());
-    const primaryPolicyArea = getPrimaryPolicyArea(policyAreas[0] || '');
+    // Extract policy areas (comma-separated) and map all of them
+    const policyAreas = policyArea.split(',').map(area => area.trim()).filter(area => area);
+    const mappedPolicyAreas = policyAreas.map(area => getPolicyAreaMapping(area)).filter(area => area);
+    const primaryPolicyArea = mappedPolicyAreas[0] || 'landuse';
 
     // Create tags from policy areas and strengths
     const tags = [];
@@ -91,6 +92,7 @@ function importCSV(csvPath) {
       region: mappedRegion,
       policyType: 'housing', // All items in this dataset are housing-related
       policyArea: primaryPolicyArea,
+      policyAreas: mappedPolicyAreas, // Array of all applicable policy areas
       date: formatDate(date),
       author: org,
       tags: uniqueTags,
@@ -107,7 +109,7 @@ function importCSV(csvPath) {
   return transformedData;
 }
 
-function getPrimaryPolicyArea(policyAreaText) {
+function getPolicyAreaMapping(policyAreaText) {
   const mapping = {
     'Land Use': 'landuse',
     'Financing Projects': 'financing',
@@ -118,14 +120,14 @@ function getPrimaryPolicyArea(policyAreaText) {
     'Homeownership': 'homeownership'
   };
 
-  // Find the first matching policy area
+  // Find exact or partial matches
   for (const [key, value] of Object.entries(mapping)) {
     if (policyAreaText.includes(key)) {
       return value;
     }
   }
   
-  return 'landuse'; // Default fallback
+  return null; // Return null if no match found
 }
 
 function generateImageKeywords(type, policyArea, title) {

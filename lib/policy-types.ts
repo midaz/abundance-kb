@@ -7,6 +7,7 @@ export interface PolicyResource {
   region: string
   policyType: string
   policyArea: string
+  policyAreas: string[] // Array of all applicable policy areas
   date: string
   author: string
   tags: string[]
