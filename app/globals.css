@@ -125,11 +125,21 @@
 }
 
 @layer base {
-  * {
+  /* Only apply base styles within abundance widget containers */
+  .abundance-kb-app * {
     @apply border-border outline-ring/50;
   }
-  body {
+  .abundance-kb-app {
     @apply bg-background text-foreground;
+  }
+  
+  /* Keep global styles for non-widget pages */
+  body:not(.abundance-widget-page) {
+    @apply bg-background text-foreground;
+  }
+  
+  body:not(.abundance-widget-page) * {
+    @apply border-border outline-ring/50;
   }
 }
 
@@ -144,14 +154,45 @@
     font-family: "TT Hoves Pro", "Inter", var(--font-inter), system-ui, -apple-system, sans-serif;
   }
 
-  /* WordPress-safe scoped container for font isolation */
+  /* WordPress-safe scoped container for font and style isolation */
   .abundance-kb-app {
     font-family: "TT Hoves Pro", "Inter", var(--font-inter), system-ui, -apple-system, sans-serif;
+    /* Reset common WordPress theme overrides */
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   .abundance-kb-app * {
-    font-family: inherit;
+    box-sizing: border-box !important;
   }
+  
+  /* Prevent WordPress theme conflicts */
+  .abundance-kb-app h1, 
+  .abundance-kb-app h2, 
+  .abundance-kb-app h3, 
+  .abundance-kb-app h4, 
+  .abundance-kb-app h5, 
+  .abundance-kb-app h6 {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+  }
+  
+  .abundance-kb-app p {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .abundance-kb-app a {
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+  
+
+  
+
 
   /* Card title improvements for better text readability */
   .abundance-kb-app [data-slot="card-title"] {

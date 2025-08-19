@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abundance Widget Embed Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #333;
+            color: white;
+            padding: 15px;
+            margin: -20px -20px 20px;
+            border-radius: 8px 8px 0 0;
+        }
+        .nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .nav a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .content {
+            margin: 20px 0;
+        }
+        .widget-section {
+            margin: 40px 0;
+            padding: 20px;
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+        .code-block {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+                <strong>WordPress Site Demo</strong>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Resources</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        
+        <div class="content">
+            <h1>Policy Resources Page</h1>
+            <p>This page demonstrates how the Abundance Knowledge Base widget will appear when embedded in a WordPress site. The widget below loads from your Vercel deployment.</p>
+            
+            <h2>Integration Code:</h2>
+            <div class="code-block">
+&lt;div id="abundance-kb"&gt;&lt;/div&gt;<br>
+&lt;script src="https://your-app.vercel.app/embed.js"&gt;&lt;/script&gt;
+            </div>
+        </div>
+
+        <div class="widget-section">
+            <h3>Default Widget Configuration:</h3>
+            <!-- Default widget - will auto-initialize -->
+            <div id="abundance-kb"></div>
+        </div>
+
+        <div class="widget-section">
+            <h3>Compact Widget (No Filters):</h3>
+            <!-- Compact widget with data attributes -->
+            <div 
+                id="abundance-compact" 
+                data-abundance-widget="true"
+                data-abundance-show-filters="false"
+                data-abundance-compact-mode="true"
+                data-abundance-max-height="500px"
+            ></div>
+        </div>
+
+        <div class="widget-section">
+            <h3>Custom Configuration Widget:</h3>
+            <!-- Custom widget initialized via JavaScript -->
+            <div id="abundance-custom"></div>
+        </div>
+    </div>
+
+    <!-- Load the widget script -->
+    <script>
+        // For local testing, replace with your local URL
+        // For production testing, replace with your Vercel URL
+        const WIDGET_BASE_URL = window.location.origin;
+        
+        // Load widget script
+        const script = document.createElement('script');
+        script.src = WIDGET_BASE_URL + '/embed.js';
+        script.onload = function() {
+            // Initialize custom widget after script loads
+            if (window.AbundanceWidget) {
+                window.AbundanceWidget.init('abundance-custom', {
+                    theme: 'light',
+                    maxHeight: '400px',
+                    showFilters: true,
+                    compactMode: false
+                });
+            }
+        };
+        document.head.appendChild(script);
+    </script>
+</body>
+</html>
