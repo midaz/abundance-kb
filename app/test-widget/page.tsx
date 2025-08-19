@@ -16,8 +16,8 @@ export default function TestWidgetPage() {
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
             <h2 className="font-semibold text-blue-900 mb-2">WordPress Integration Code:</h2>
             <div className="bg-white rounded border p-3 font-mono text-sm">
-              <div className="mb-2">&lt;div id="abundance-kb"&gt;&lt;/div&gt;</div>
-              <div>&lt;script src="https://your-app.vercel.app/embed.js"&gt;&lt;/script&gt;</div>
+              <div className="mb-2">&lt;div id=&quot;abundance-kb&quot;&gt;&lt;/div&gt;</div>
+              <div>&lt;script src=&quot;https://your-app.vercel.app/embed.js&quot;&gt;&lt;/script&gt;</div>
             </div>
           </div>
         </div>

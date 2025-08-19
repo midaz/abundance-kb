@@ -1,7 +1,7 @@
 "use client"
 
 import styled from 'styled-components'
-import { Search, Filter, FileText, Headphones, BookOpen, Users, MapPin, Building, X, ExternalLink, Calendar } from "lucide-react"
+import { Search, Filter, X, ExternalLink } from "lucide-react"
 import Image from "next/image"
 import { useAbundanceData } from "@/hooks/useAbundanceData"
 
@@ -373,13 +373,6 @@ export default function AbundanceWidget({ config = {} }: AbundanceWidgetProps) {
     // Computed values
     filteredContent,
     
-    // Filter state
-    excludedTypes,
-    excludedRegions,
-    excludedPolicyTypes,
-    excludedPolicyAreas,
-    excludedYears,
-    
     // Actions
     handleFilterChange,
     handleSelectAll,
@@ -397,7 +390,6 @@ export default function AbundanceWidget({ config = {} }: AbundanceWidgetProps) {
     typeLabels,
     regionLabels,
     policyTypeLabels,
-    policyAreaLabels,
   } = useAbundanceData({ config })
 
   const FilterSectionComponent = ({ filterType, sortYears = false }: { filterType: keyof typeof filterConfig, sortYears?: boolean }) => {
@@ -605,9 +597,9 @@ export default function AbundanceWidget({ config = {} }: AbundanceWidgetProps) {
                 )}
 
                 {!hasMore && displayedItems.length > 0 && (
-                  <div style={{ textAlign: 'center', padding: '32px 0' }}>
-                    <p style={{ color: '#6b7280' }}>You've reached the end of the results.</p>
-                  </div>
+                                     <div style={{ textAlign: 'center', padding: '32px 0' }}>
+                     <p style={{ color: '#6b7280' }}>You&apos;ve reached the end of the results.</p>
+                   </div>
                 )}
               </>
             ) : (
@@ -627,10 +619,10 @@ export default function AbundanceWidget({ config = {} }: AbundanceWidgetProps) {
                     <Search size={48} style={{ color: '#9ca3af' }} />
                   </div>
                   <h3 style={{ fontSize: '20px', fontWeight: '600', marginBottom: '8px', color: '#111827' }}>No resources found</h3>
-                  <p style={{ color: '#6b7280', textAlign: 'center', maxWidth: '448px', marginBottom: '24px' }}>
-                    We couldn't find any resources matching your current filters. Try adjusting your search criteria or
-                    clearing some filters.
-                  </p>
+                                     <p style={{ color: '#6b7280', textAlign: 'center', maxWidth: '448px', marginBottom: '24px' }}>
+                     We couldn&apos;t find any resources matching your current filters. Try adjusting your search criteria or
+                     clearing some filters.
+                   </p>
                   <Button onClick={clearAllFilters}>
                     Clear All Filters
                   </Button>

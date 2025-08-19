@@ -1,6 +1,6 @@
 "use client"
 
-import { Search, Filter, FileText, Headphones, BookOpen, Users, MapPin, Building, X, ExternalLink, Calendar } from "lucide-react"
+import { Search, Filter, X, ExternalLink } from "lucide-react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -42,7 +42,6 @@ export default function PolicyCMS() {
     clearAllFilters,
     openModal,
     closeModal,
-    loadMoreItems,
     
     // Configuration
     filterConfig,
