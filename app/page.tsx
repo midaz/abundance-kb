@@ -10,204 +10,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox"
 import { Separator } from "@/components/ui/separator"
 
-// Mock data for content items
-const mockContent = [
-  {
-    id: 1,
-    title: "Housing Policy Framework for Urban Development",
-    description: "Comprehensive analysis of housing policies and their impact on urban growth patterns.",
-    type: "article",
-    region: "west",
-    policyType: "housing",
-    policyArea: "landuse",
-    date: "2024-01-15",
-    author: "Dr. Sarah Chen",
-    tags: ["urban planning", "affordable housing", "zoning"],
-    image: "/placeholder.svg?height=200&width=300",
-  },
-  {
-    id: 2,
-    title: "Transportation Infrastructure Investment Strategies",
-    description: "Research paper examining ROI of various transportation infrastructure projects.",
-    type: "paper",
-    region: "northeast",
-    policyType: "housing",
-    policyArea: "financing",
-    date: "2024-01-10",
-    author: "Transportation Research Institute",
-    tags: ["infrastructure", "public transit", "economic impact"],
-    image: "/placeholder.svg?height=200&width=300",
-  },
-  {
-    id: 3,
-    title: "Education Reform Podcast Series",
-    description: "Weekly discussions with education leaders on innovative policy approaches.",
-    type: "podcast",
-    region: "south",
-    policyType: "housing",
-    policyArea: "rental",
-    date: "2024-01-08",
-    author: "Policy Voices Network",
-    tags: ["education reform", "innovation", "leadership"],
-    image: "/placeholder.svg?height=200&width=300",
-  },
-  {
-    id: 4,
-    title: "Climate Action Implementation Guide",
-    description: "Practical handbook for implementing climate policies at the local level.",
-    type: "book",
-    region: "midwest",
-    policyType: "housing",
-    policyArea: "climate",
-    date: "2024-01-05",
-    author: "Green Policy Institute",
-    tags: ["climate change", "sustainability", "local government"],
-    image: "/placeholder.svg?height=200&width=300",
-  },
-  {
-    id: 5,
-    title: "Economic Development Through Innovation Hubs",
-    description: "Case study analysis of successful innovation districts and their economic impact.",
-    type: "article",
-    region: "national",
-    policyType: "housing",
-    policyArea: "cost",
-    date: "2024-01-03",
-    author: "Economic Policy Research Center",
-    tags: ["innovation", "economic development", "technology"],
-    image: "/placeholder.svg?height=200&width=300",
-  },
-  {
-    id: 6,
-    title: "Healthcare Access in Rural Communities",
-    description: "Research on improving healthcare delivery in underserved rural areas.",
-    type: "paper",
-    region: "south",
-    policyType: "housing",
-    policyArea: "homeownership",
-    date: "2023-12-28",
-    author: "Rural Health Policy Center",
-    tags: ["rural health", "access", "telemedicine"],
-    image: "/placeholder.svg?height=200&width=300",
-  },
-  {
-    id: 7,
-    title: "Affordable Housing Development Strategies",
-    description: "Best practices for developing affordable housing in high-cost markets.",
-    type: "guide",
-    region: "west",
-    policyType: "housing",
-    policyArea: "financing",
-    date: "2023-12-20",
-    author: "Housing Development Alliance",
-    tags: ["affordable housing", "development", "financing"],
-    image: "/placeholder.svg?height=200&width=300",
-  },
-  {
-    id: 8,
-    title: "Tenant Rights Protection Framework",
-    description: "Comprehensive guide to implementing tenant protection policies.",
-    type: "model",
-    region: "northeast",
-    policyType: "housing",
-    policyArea: "rental",
-    date: "2023-12-15",
-    author: "Tenant Advocacy Group",
-    tags: ["tenant rights", "rental", "protection"],
-    image: "/placeholder.svg?height=200&width=300",
-  },
-  {
-    id: 9,
-    title: "Building Code Modernization Study",
-    description: "Analysis of updated building codes and their impact on construction costs.",
-    type: "brief",
-    region: "midwest",
-    policyType: "housing",
-    policyArea: "cost",
-    date: "2023-12-10",
-    author: "Construction Policy Institute",
-    tags: ["building codes", "construction", "costs"],
-    image: "/placeholder.svg?height=200&width=300",
-  },
-  {
-    id: 10,
-    title: "Climate-Resilient Housing Design",
-    description: "Innovative approaches to designing housing that withstands climate challenges.",
-    type: "case",
-    region: "south",
-    policyType: "housing",
-    policyArea: "climate",
-    date: "2023-12-05",
-    author: "Resilient Communities Network",
-    tags: ["climate resilience", "housing design", "sustainability"],
-    image: "/placeholder.svg?height=200&width=300",
-  },
-  {
-    id: 11,
-    title: "Homelessness Prevention Programs",
-    description: "Evaluation of successful homelessness prevention initiatives across the country.",
-    type: "assessment",
-    region: "national",
-    policyType: "housing",
-    policyArea: "homelessness",
-    date: "2023-11-30",
-    author: "National Housing Coalition",
-    tags: ["homelessness", "prevention", "social services"],
-    image: "/placeholder.svg?height=200&width=300",
-  },
-  {
-    id: 12,
-    title: "First-Time Homebuyer Support Systems",
-    description: "Analysis of programs supporting first-time homebuyers in various markets.",
-    type: "news",
-    region: "west",
-    policyType: "housing",
-    policyArea: "homeownership",
-    date: "2023-11-25",
-    author: "Housing Finance Weekly",
-    tags: ["homeownership", "first-time buyers", "financing"],
-    image: "/placeholder.svg?height=200&width=300",
-  },
-  {
-    id: 13,
-    title: "Land Use Planning Interactive Tool",
-    description: "Digital platform for visualizing land use planning scenarios and outcomes.",
-    type: "map",
-    region: "northeast",
-    policyType: "housing",
-    policyArea: "landuse",
-    date: "2023-11-20",
-    author: "Urban Planning Tech Lab",
-    tags: ["land use", "planning", "visualization"],
-    image: "/placeholder.svg?height=200&width=300",
-  },
-  {
-    id: 14,
-    title: "Housing Policy Training Workshop",
-    description: "Professional development program for housing policy practitioners.",
-    type: "training",
-    region: "midwest",
-    policyType: "housing",
-    policyArea: "financing",
-    date: "2023-11-15",
-    author: "Policy Training Institute",
-    tags: ["training", "professional development", "policy"],
-    image: "/placeholder.svg?height=200&width=300",
-  },
-  {
-    id: 15,
-    title: "Community Housing Catalog",
-    description: "Comprehensive database of community housing resources and programs.",
-    type: "catalog",
-    region: "south",
-    policyType: "housing",
-    policyArea: "rental",
-    date: "2023-11-10",
-    author: "Community Housing Network",
-    tags: ["community housing", "resources", "programs"],
-    image: "/placeholder.svg?height=200&width=300",
-  },
-]
+import { policyResources } from "@/lib/policy-data"
 
 const typeIcons = {
   simulator: FileText,
@@ -283,17 +86,17 @@ export default function PolicyCMS() {
   const [selectedPolicyAreas, setSelectedPolicyAreas] = useState<string[]>([])
   const [sortBy, setSortBy] = useState("date")
 
-  const [displayedItems, setDisplayedItems] = useState<typeof mockContent>([])
+  const [displayedItems, setDisplayedItems] = useState<typeof policyResources>([])
   const [isLoading, setIsLoading] = useState(false)
   const [hasMore, setHasMore] = useState(true)
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 6
 
-  const [selectedItem, setSelectedItem] = useState<(typeof mockContent)[0] | null>(null)
+  const [selectedItem, setSelectedItem] = useState<(typeof policyResources)[0] | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   const filteredContent = useMemo(() => {
-    const filtered = mockContent.filter((item) => {
+    const filtered = policyResources.filter((item) => {
       const matchesSearch =
         searchQuery === "" ||
         item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -391,7 +194,7 @@ export default function PolicyCMS() {
     setSearchQuery("")
   }
 
-  const openModal = (item: (typeof mockContent)[0]) => {
+  const openModal = (item: (typeof policyResources)[0]) => {
     setSelectedItem(item)
     setIsModalOpen(true)
     document.body.style.overflow = "hidden" // Prevent background scrolling
@@ -614,21 +417,39 @@ export default function PolicyCMS() {
                     {filteredContent.length !== 1 ? "s" : ""}
                   </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 items-start">
                   {displayedItems.map((item) => {
                     const IconComponent = typeIcons[item.type as keyof typeof typeIcons]
                     return (
                       <Card
                         key={item.id}
-                        className="group hover:shadow-lg transition-all duration-300 bg-card/95 backdrop-blur-sm hover:bg-card cursor-pointer"
+                        className="group hover:shadow-lg transition-all duration-300 bg-card/95 backdrop-blur-sm hover:bg-card cursor-pointer h-fit"
                         onClick={() => openModal(item)}
                       >
                         <div className="aspect-video relative overflow-hidden rounded-t-lg">
-                          <img
-                            src={item.image || "/placeholder.svg"}
-                            alt={item.title}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                          />
+                          {item.image ? (
+                            <img
+                              src={item.image}
+                              alt={item.title}
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                              onError={(e) => {
+                                const img = e.target as HTMLImageElement;
+                                img.src = "/placeholder.svg";
+                              }}
+                            />
+                          ) : (
+                            <div
+                              className="w-full h-full group-hover:scale-105 transition-transform duration-300 flex items-center justify-center"
+                              style={{ background: item.gradient }}
+                            >
+                              <div className="text-white text-center px-4">
+                                <IconComponent className="w-8 h-8 mx-auto mb-2 opacity-80" />
+                                <div className="text-sm font-medium opacity-90">
+                                  {typeLabels[item.type as keyof typeof typeLabels]}
+                                </div>
+                              </div>
+                            </div>
+                          )}
                           <div className="absolute top-3 left-3">
                             <Badge className="bg-accent-purple text-white">
                               <IconComponent className="w-3 h-3 mr-1" />
@@ -636,11 +457,13 @@ export default function PolicyCMS() {
                             </Badge>
                           </div>
                         </div>
-                        <CardHeader>
-                          <CardTitle className="line-clamp-2 group-hover:text-accent-purple transition-colors leading-snug py-1">
+                        <CardHeader className="pb-4">
+                          <CardTitle className="group-hover:text-accent-purple transition-colors leading-tight text-base font-semibold min-h-fit break-words">
                             {item.title}
                           </CardTitle>
-                          <CardDescription className="line-clamp-6">{item.description}</CardDescription>
+                          <CardDescription className="line-clamp-3 text-sm leading-relaxed mt-2">
+                            {item.description}
+                          </CardDescription>
                         </CardHeader>
                         <CardContent>
                           <div className="space-y-3">
@@ -746,11 +569,32 @@ export default function PolicyCMS() {
             <div className="p-6">
               {/* Image */}
               <div className="aspect-video relative overflow-hidden rounded-lg mb-6">
-                <img
-                  src={selectedItem.image || "/placeholder.svg"}
-                  alt={selectedItem.title}
-                  className="w-full h-full object-cover"
-                />
+                {selectedItem.image ? (
+                  <img
+                    src={selectedItem.image}
+                    alt={selectedItem.title}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      const img = e.target as HTMLImageElement;
+                      img.src = "/placeholder.svg";
+                    }}
+                  />
+                ) : (
+                  <div
+                    className="w-full h-full flex items-center justify-center"
+                    style={{ background: selectedItem.gradient }}
+                  >
+                    <div className="text-white text-center">
+                      {(() => {
+                        const IconComponent = typeIcons[selectedItem.type as keyof typeof typeIcons]
+                        return <IconComponent className="w-16 h-16 mx-auto mb-4 opacity-80" />
+                      })()}
+                      <div className="text-xl font-medium opacity-90">
+                        {typeLabels[selectedItem.type as keyof typeof typeLabels]}
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Title and Description */}
@@ -819,12 +663,52 @@ export default function PolicyCMS() {
                 </div>
               </div>
 
+              {/* Additional Information */}
+              {(selectedItem.accessibilityScore || selectedItem.abundanceAlignment || selectedItem.strengths) && (
+                <div className="mb-6">
+                  <h3 className="font-semibold text-gray-900 mb-2">Additional Information</h3>
+                  <div className="space-y-2 text-sm">
+                    {selectedItem.accessibilityScore && (
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Accessibility Score:</span>
+                        <span className="text-gray-900 capitalize">{selectedItem.accessibilityScore}</span>
+                      </div>
+                    )}
+                    {selectedItem.abundanceAlignment && (
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Abundance Alignment:</span>
+                        <span className="text-gray-900">{selectedItem.abundanceAlignment}</span>
+                      </div>
+                    )}
+                    {selectedItem.strengths && (
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Strengths:</span>
+                        <span className="text-gray-900">{selectedItem.strengths}</span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+
               {/* Action Button */}
               <div className="pt-4 border-t">
-                <Button className="w-full bg-accent-purple hover:bg-accent-purple/90 text-white">
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  View Original Source
-                </Button>
+                {selectedItem.url ? (
+                  <Button 
+                    className="w-full bg-accent-purple hover:bg-accent-purple/90 text-white"
+                    onClick={() => window.open(selectedItem.url, '_blank')}
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    View Original Source
+                  </Button>
+                ) : (
+                  <Button 
+                    className="w-full bg-gray-400 cursor-not-allowed text-white"
+                    disabled
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    No Source Available
+                  </Button>
+                )}
               </div>
             </div>
           </div>
