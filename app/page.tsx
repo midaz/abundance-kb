@@ -160,9 +160,20 @@ export default function PolicyCMS() {
   }, [currentPage, filteredContent, isLoading, hasMore])
 
   useEffect(() => {
-    setDisplayedItems(filteredContent.slice(0, itemsPerPage))
-    setCurrentPage(2)
-    setHasMore(filteredContent.length > itemsPerPage)
+    // Calculate how many items to show to maintain current viewport
+    const currentScrollY = window.scrollY
+    const estimatedItemHeight = 450 // Approximate card height including margins
+    const itemsAboveViewport = Math.floor(currentScrollY / estimatedItemHeight)
+    const viewportHeight = window.innerHeight
+    const itemsInViewport = Math.ceil(viewportHeight / estimatedItemHeight) + 2 // +2 for buffer
+    
+    // Show enough items to maintain scroll position, but at least the minimum page size
+    const minimumItems = Math.max(itemsPerPage, itemsAboveViewport + itemsInViewport)
+    const itemsToShow = Math.min(minimumItems, filteredContent.length)
+    
+    setDisplayedItems(filteredContent.slice(0, itemsToShow))
+    setCurrentPage(Math.ceil(itemsToShow / itemsPerPage) + 1)
+    setHasMore(filteredContent.length > itemsToShow)
   }, [filteredContent])
 
   useEffect(() => {
