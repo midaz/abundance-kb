@@ -346,23 +346,6 @@ const Badge = styled.span<{ variant?: string; color?: string }>`
   border: 1px solid transparent;
 `
 
-const typeIcons = {
-  simulator: FileText,
-  catalog: BookOpen,
-  brief: FileText,
-  assessment: FileText,
-  map: MapPin,
-  training: Users,
-  guide: BookOpen,
-  case: FileText,
-  news: FileText,
-  model: FileText,
-  article: FileText,
-  paper: BookOpen,
-  podcast: Headphones,
-  book: BookOpen,
-}
-
 interface WidgetConfig {
   theme?: 'light' | 'dark'
   maxHeight?: string
@@ -410,6 +393,7 @@ export default function AbundanceWidget({ config = {} }: AbundanceWidgetProps) {
     config: widgetConfig,
     
     // Label mappings
+    typeIcons,
     typeLabels,
     regionLabels,
     policyTypeLabels,

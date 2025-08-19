@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect, useCallback } from "react"
+import { FileText, Headphones, BookOpen, Users, MapPin, Building, Calendar } from "lucide-react"
 import { policyResources } from "@/lib/policy-data"
 
 interface WidgetConfig {
@@ -300,6 +301,24 @@ export const useAbundanceData = ({ config = {} }: UseAbundanceDataProps = {}) =>
     return () => document.removeEventListener("keydown", handleEscape)
   }, [isModalOpen])
 
+  // Icon mappings for UI components
+  const typeIcons = {
+    simulator: FileText,
+    catalog: BookOpen,
+    brief: FileText,
+    assessment: FileText,
+    map: MapPin,
+    training: Users,
+    guide: BookOpen,
+    case: FileText,
+    news: FileText,
+    model: FileText,
+    article: FileText,
+    paper: BookOpen,
+    podcast: Headphones,
+    book: BookOpen,
+  }
+
   // Label mappings for UI components
   const typeLabels = {
     simulator: "Simulator",
@@ -390,6 +409,7 @@ export const useAbundanceData = ({ config = {} }: UseAbundanceDataProps = {}) =>
     },
     
     // Label mappings
+    typeIcons,
     typeLabels,
     regionLabels,
     policyTypeLabels,
