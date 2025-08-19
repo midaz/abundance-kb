@@ -15,7 +15,7 @@ export interface PolicyResource {
   accessibilityScore?: string
   abundanceAlignment?: string
   strengths?: string
-  image?: string
+  image?: string | null
   gradient?: string
 }
 

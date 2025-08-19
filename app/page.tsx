@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useEffect, useCallback } from "react"
 import { Search, Filter, FileText, Headphones, BookOpen, Users, MapPin, Building, X, ExternalLink, Calendar } from "lucide-react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -483,10 +484,11 @@ export default function PolicyCMS() {
                       >
                         <div className="aspect-video relative overflow-hidden rounded-t-lg">
                           {item.image ? (
-                            <img
+                            <Image
                               src={item.image}
                               alt={item.title}
-                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                              fill
+                              className="object-cover group-hover:scale-105 transition-transform duration-300"
                               onError={(e) => {
                                 const img = e.target as HTMLImageElement;
                                 img.src = "/placeholder.svg";
@@ -630,10 +632,11 @@ export default function PolicyCMS() {
                     onClick={() => selectedItem.url && window.open(selectedItem.url, '_blank')}
                     title={selectedItem.url ? "Click to open original source" : "No source available"}
                   >
-                    <img
+                    <Image
                       src={selectedItem.image}
                       alt={selectedItem.title}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
                       onError={(e) => {
                         const img = e.target as HTMLImageElement;
                         img.src = "/placeholder.svg";

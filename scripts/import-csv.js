@@ -82,7 +82,7 @@ function importCSV(csvPath) {
 
     // Generate gradient background instead of external images
     const gradientInfo = getGradientForCategory(primaryPolicyArea, index);
-    const imageUrl = null; // Will use gradients instead
+    const imageUrl = undefined; // Will use gradients instead
 
     return {
       id: index + 1,

@@ -27,7 +27,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "medium",
     "abundanceAlignment": "",
     "strengths": "Aimed at Policymakers",
-    "image": null,
     "gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
   },
   {
@@ -55,7 +54,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "High",
     "abundanceAlignment": "",
     "strengths": "Aimed at Policymakers",
-    "image": null,
     "gradient": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
   },
   {
@@ -82,7 +80,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "High",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
   },
   {
@@ -105,7 +102,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
   },
   {
@@ -132,7 +128,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "High",
     "abundanceAlignment": "",
     "strengths": "Explains Tax Credits, public land grants",
-    "image": null,
     "gradient": "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)"
   },
   {
@@ -155,7 +150,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)"
   },
   {
@@ -183,7 +177,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "Medium",
     "abundanceAlignment": "",
     "strengths": "Very actionable",
-    "image": null,
     "gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
   },
   {
@@ -209,7 +202,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "Very actionable",
-    "image": null,
     "gradient": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
   },
   {
@@ -236,7 +228,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "Comprehensive, very actionable",
-    "image": null,
     "gradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
   },
   {
@@ -259,7 +250,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
   },
   {
@@ -290,7 +280,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "high",
     "abundanceAlignment": "",
     "strengths": "Beyond housing supply, this page also includes policies",
-    "image": null,
     "gradient": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
   },
   {
@@ -314,7 +303,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "Facilitates policy makers to prioritize emergency rental assistance and targeted outreach to neighborhoods that need it most.",
-    "image": null,
     "gradient": "linear-gradient(135deg, #fdbb2d 0%, #22c1c3 100%)"
   },
   {
@@ -343,7 +331,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "high",
     "abundanceAlignment": "",
     "strengths": "Highly digestable, nice for comparing several upzoning options",
-    "image": null,
     "gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
   },
   {
@@ -374,7 +361,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "High",
     "abundanceAlignment": "",
     "strengths": "Helps to intuitively visualize changes like the increased cost of housing, helpful, comprehensive companion report detailing national trends",
-    "image": null,
     "gradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
   },
   {
@@ -403,7 +389,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #fdbb2d 0%, #22c1c3 100%)"
   },
   {
@@ -428,7 +413,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "medium",
     "strengths": "Straightforward guidance on upzoning, strong argument targeted at persuading NIMBY-types.",
-    "image": null,
     "gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
   },
   {
@@ -451,7 +435,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
   },
   {
@@ -475,7 +458,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "Medium",
     "abundanceAlignment": "",
     "strengths": "Accompanied by a comprehensive report. May be useful to policymakers determining where to focus building affordable housing",
-    "image": null,
     "gradient": "linear-gradient(135deg, #fdbb2d 0%, #22c1c3 100%)"
   },
   {
@@ -504,7 +486,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "Low, resource is not free, but discounted for public sector employees",
     "abundanceAlignment": "",
     "strengths": "Comprehensive, interactive, provides access to experts and network of learners",
-    "image": null,
     "gradient": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
   },
   {
@@ -531,7 +512,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #fa709a 0%, #fee140 100%)"
   },
   {
@@ -556,7 +536,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "Medium, free but time intensive",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #fdbb2d 0%, #22c1c3 100%)"
   },
   {
@@ -580,7 +559,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "High, but must register email to access",
     "abundanceAlignment": "",
     "strengths": "Includes checklist and messaging to win over skeptics.",
-    "image": null,
     "gradient": "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)"
   },
   {
@@ -603,7 +581,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #fa709a 0%, #fee140 100%)"
   },
   {
@@ -634,7 +611,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "medium-high",
     "strengths": "Wide breadth and well researched",
-    "image": null,
     "gradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
   },
   {
@@ -657,7 +633,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
   },
   {
@@ -680,7 +655,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
   },
   {
@@ -703,7 +677,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)"
   },
   {
@@ -726,7 +699,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
   },
   {
@@ -749,7 +721,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "register to access",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #fa709a 0%, #fee140 100%)"
   },
   {
@@ -774,7 +745,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "register to access",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #fdbb2d 0%, #22c1c3 100%)"
   },
   {
@@ -801,7 +771,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "members only",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
   },
   {
@@ -824,7 +793,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "register to access",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
   },
   {
@@ -847,7 +815,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "register to access",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #fdbb2d 0%, #22c1c3 100%)"
   },
   {
@@ -872,7 +839,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #d299c2 0%, #fef9d7 100%)"
   },
   {
@@ -898,7 +864,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "High",
     "strengths": "emphasis on implementation and outcomes",
-    "image": null,
     "gradient": "linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%)"
   },
   {
@@ -923,7 +888,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "register to access",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #fdbb2d 0%, #22c1c3 100%)"
   },
   {
@@ -948,7 +912,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "High",
     "abundanceAlignment": "",
     "strengths": "High fidelity, consistently updated",
-    "image": null,
     "gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
   },
   {
@@ -973,7 +936,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
   },
   {
@@ -996,7 +958,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
   },
   {
@@ -1021,7 +982,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "best on a mobile device",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #d299c2 0%, #fef9d7 100%)"
   },
   {
@@ -1044,7 +1004,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #fa709a 0%, #fee140 100%)"
   },
   {
@@ -1067,7 +1026,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
   },
   {
@@ -1092,7 +1050,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "text heavy",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
   },
   {
@@ -1115,7 +1072,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "behind a membership wall, but posted by CA HCD",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
   },
   {
@@ -1138,7 +1094,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
   },
   {
@@ -1161,7 +1116,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
   },
   {
@@ -1184,7 +1138,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
   },
   {
@@ -1207,7 +1160,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
   },
   {
@@ -1230,7 +1182,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
   },
   {
@@ -1253,7 +1204,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #fa709a 0%, #fee140 100%)"
   },
   {
@@ -1276,7 +1226,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)"
   },
   {
@@ -1305,7 +1254,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
   },
   {
@@ -1330,7 +1278,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
   },
   {
@@ -1357,7 +1304,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
   },
   {
@@ -1380,7 +1326,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
   },
   {
@@ -1403,7 +1348,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
   },
   {
@@ -1426,7 +1370,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
   },
   {
@@ -1449,7 +1392,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
   },
   {
@@ -1474,7 +1416,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #fa709a 0%, #fee140 100%)"
   },
   {
@@ -1497,7 +1438,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)"
   },
   {
@@ -1520,7 +1460,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
   },
   {
@@ -1543,7 +1482,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
   },
   {
@@ -1566,7 +1504,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
   },
   {
@@ -1589,7 +1526,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)"
   },
   {
@@ -1612,7 +1548,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
   },
   {
@@ -1635,7 +1570,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
   },
   {
@@ -1658,7 +1592,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
   },
   {
@@ -1681,7 +1614,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)"
   },
   {
@@ -1704,7 +1636,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)"
   },
   {
@@ -1731,7 +1662,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
   },
   {
@@ -1756,7 +1686,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
   },
   {
@@ -1779,7 +1708,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
   },
   {
@@ -1804,7 +1732,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
   },
   {
@@ -1827,7 +1754,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #fa709a 0%, #fee140 100%)"
   },
   {
@@ -1850,7 +1776,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)"
   },
   {
@@ -1873,7 +1798,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
   },
   {
@@ -1898,7 +1822,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
   },
   {
@@ -1923,7 +1846,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
   },
   {
@@ -1948,7 +1870,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #d299c2 0%, #fef9d7 100%)"
   },
   {
@@ -1971,7 +1892,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #fa709a 0%, #fee140 100%)"
   },
   {
@@ -1994,7 +1914,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
   },
   {
@@ -2021,7 +1940,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
   },
   {
@@ -2044,7 +1962,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
   },
   {
@@ -2067,7 +1984,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
   },
   {
@@ -2092,7 +2008,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #d299c2 0%, #fef9d7 100%)"
   },
   {
@@ -2117,7 +2032,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%)"
   },
   {
@@ -2140,7 +2054,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)"
   },
   {
@@ -2163,7 +2076,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
   },
   {
@@ -2186,7 +2098,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%)"
   },
   {
@@ -2211,7 +2122,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)"
   },
   {
@@ -2234,7 +2144,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
   },
   {
@@ -2257,7 +2166,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)"
   },
   {
@@ -2280,7 +2188,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)"
   },
   {
@@ -2303,7 +2210,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
   },
   {
@@ -2326,7 +2232,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
   },
   {
@@ -2353,7 +2258,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)"
   },
   {
@@ -2380,7 +2284,6 @@ export const policyResources: PolicyResource[] = [
     "accessibilityScore": "",
     "abundanceAlignment": "",
     "strengths": "",
-    "image": null,
     "gradient": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
   }
 ]
