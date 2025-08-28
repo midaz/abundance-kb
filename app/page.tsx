@@ -162,6 +162,14 @@ export default function PolicyCMS() {
 
   useEffect(() => {
     // Calculate how many items to show to maintain current viewport
+    if (typeof window === 'undefined') {
+      // Server-side rendering: just show initial page
+      setDisplayedItems(filteredContent.slice(0, itemsPerPage))
+      setCurrentPage(2)
+      setHasMore(filteredContent.length > itemsPerPage)
+      return
+    }
+    
     const currentScrollY = window.scrollY
     const estimatedItemHeight = 450 // Approximate card height including margins
     const itemsAboveViewport = Math.floor(currentScrollY / estimatedItemHeight)
@@ -178,6 +186,9 @@ export default function PolicyCMS() {
   }, [filteredContent])
 
   useEffect(() => {
+    // Only set up scroll listener on client side
+    if (typeof window === 'undefined') return
+
     const handleScroll = () => {
       if (window.innerHeight + document.documentElement.scrollTop >= document.documentElement.offsetHeight - 1000) {
         loadMoreItems()
