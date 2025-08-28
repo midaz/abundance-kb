@@ -373,7 +373,7 @@ export default function PolicyCMS() {
                   onClick={clearAllFilters}
                   className="w-full bg-transparent hover:bg-accent-purple hover:text-white transition-colors"
                 >
-                  Clear All
+                  Select All
                 </Button>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -596,7 +596,7 @@ export default function PolicyCMS() {
                     variant="outline"
                     className="hover:bg-accent-purple hover:text-white transition-colors bg-transparent"
                   >
-                    Clear All Filters
+                    Select All Filters
                   </Button>
                 </CardContent>
               </Card>
