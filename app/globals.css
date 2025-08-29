@@ -12,6 +12,31 @@
   font-display: swap;
 }
 
+/* TT Hoves Pro Condensed Fonts */
+@font-face {
+  font-family: "TT Hoves Pro Condensed";
+  src: url("/fonts/tt-hoves-font/TT Hoves Pro Trial Condensed Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Hoves Pro Condensed";
+  src: url("/fonts/tt-hoves-font/TT Hoves Pro Trial Condensed Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Hoves Pro Condensed";
+  src: url("/fonts/tt-hoves-font/TT Hoves Pro Trial Condensed Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Updated color tokens to match Abundance Network branding */
   --background: oklch(0.98 0.01 270);
@@ -144,6 +169,11 @@
     font-family: "TT Hoves Pro", "Inter", var(--font-inter), system-ui, -apple-system, sans-serif;
   }
 
+  /* TT Hoves Pro Condensed Font Family */
+  .font-hoves-condensed {
+    font-family: "TT Hoves Pro Condensed", "Inter", var(--font-inter), system-ui, -apple-system, sans-serif;
+  }
+
   /* WordPress-safe scoped container for font isolation */
   .abundance-kb-app {
     font-family: "TT Hoves Pro", "Inter", var(--font-inter), system-ui, -apple-system, sans-serif;
@@ -180,5 +210,26 @@
 
   .hover\:text-accent-purple:hover {
     color: #7a5cff;
+  }
+
+  /* Flag waving animation */
+  @keyframes wave {
+    0%, 100% {
+      transform: translateX(0) scaleX(1);
+    }
+    25% {
+      transform: translateX(1px) scaleX(1.02);
+    }
+    50% {
+      transform: translateX(0) scaleX(0.98);
+    }
+    75% {
+      transform: translateX(-1px) scaleX(1.02);
+    }
+  }
+
+  .animate-wave {
+    animation: wave 3s ease-in-out infinite;
+    transform-origin: left center;
   }
 }

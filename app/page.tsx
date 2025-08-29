@@ -12,6 +12,7 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { Separator } from "@/components/ui/separator"
 
 import { policyResources } from "@/lib/policy-data"
+import Header from "@/components/Header"
 
 const typeIcons = {
   simulator: FileText,
@@ -357,6 +358,7 @@ export default function PolicyCMS() {
 
   return (
     <div className="abundance-kb-app min-h-screen bg-policy-light">
+      <Header />
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Sidebar Filters */}
