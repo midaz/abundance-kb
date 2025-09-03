@@ -51,7 +51,7 @@ export default function Header() {
             
             {/* Logo */}
             <div className="flex items-center">
-              <a href="https://www.abundancenetwork.com/" target="_blank" rel="noopener noreferrer">
+              <a href="https://abundanceelected.com/" target="_blank" rel="noopener noreferrer">
                 <Image 
                   src="/logo.svg" 
                   alt="Abundance Elected" 
