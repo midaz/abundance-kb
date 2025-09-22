@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useMemo, useEffect, useCallback } from "react"
+import { useState, useMemo, useEffect, useCallback, useRef } from "react"
 import { Search, Filter, FileText, Headphones, BookOpen, Users, MapPin, Building, X, ExternalLink, Calendar } from "lucide-react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
@@ -12,7 +12,6 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { Separator } from "@/components/ui/separator"
 
 import { policyResources } from "@/lib/policy-data"
-import Header from "@/components/Header"
 
 const typeIcons = {
   simulator: FileText,
@@ -99,6 +98,8 @@ export default function PolicyCMS() {
   const [selectedItem, setSelectedItem] = useState<(typeof policyResources)[0] | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
+  const watcherRef = useRef<HTMLDivElement | null>(null);
+
   const filteredContent = useMemo(() => {
     const filtered = policyResources.filter((item) => {
       const matchesSearch =
@@ -170,35 +171,21 @@ export default function PolicyCMS() {
       setHasMore(filteredContent.length > itemsPerPage)
       return
     }
-    
+
     const currentScrollY = window.scrollY
     const estimatedItemHeight = 450 // Approximate card height including margins
     const itemsAboveViewport = Math.floor(currentScrollY / estimatedItemHeight)
     const viewportHeight = window.innerHeight
     const itemsInViewport = Math.ceil(viewportHeight / estimatedItemHeight) + 2 // +2 for buffer
-    
+
     // Show enough items to maintain scroll position, but at least the minimum page size
     const minimumItems = Math.max(itemsPerPage, itemsAboveViewport + itemsInViewport)
     const itemsToShow = Math.min(minimumItems, filteredContent.length)
-    
+
     setDisplayedItems(filteredContent.slice(0, itemsToShow))
     setCurrentPage(Math.ceil(itemsToShow / itemsPerPage) + 1)
     setHasMore(filteredContent.length > itemsToShow)
   }, [filteredContent])
-
-  useEffect(() => {
-    // Only set up scroll listener on client side
-    if (typeof window === 'undefined') return
-
-    const handleScroll = () => {
-      if (window.innerHeight + document.documentElement.scrollTop >= document.documentElement.offsetHeight - 1000) {
-        loadMoreItems()
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [loadMoreItems])
 
   const handleFilterChange = (filterType: string, value: string, checked: boolean) => {
     const setters = {
@@ -286,7 +273,7 @@ export default function PolicyCMS() {
   const FilterSection = ({ filterType, sortYears = false }: { filterType: keyof typeof filterConfig, sortYears?: boolean }) => {
     const config = filterConfig[filterType]
     const IconComponent = config.icon
-    
+
     let optionsToRender = config.options
     if (sortYears && filterType === 'year') {
       optionsToRender = [...config.options].sort((a, b) => parseInt(b) - parseInt(a))
@@ -356,9 +343,47 @@ export default function PolicyCMS() {
     return () => document.removeEventListener("keydown", handleEscape)
   }, [isModalOpen])
 
+
+
+  /* MINDK: Watcher to trigger loading more items when it comes into view */
+  useEffect(() => {
+    if (!watcherRef.current) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          loadMoreItems();
+        }
+      },
+      { root: null, rootMargin: "200px", threshold: 0 }
+    );
+    observer.observe(watcherRef.current);
+    return () => {
+      if (watcherRef.current) observer.unobserve(watcherRef.current);
+    };
+  }, [loadMoreItems]);
+
+  /* MINDK: Iframe resize notifier to parent */
+  useEffect(() => {
+    const notifyParent = () => {
+      const height = document.body.scrollHeight;
+      window.parent.postMessage({ type: "resize-iframe", height }, "*");
+    };
+
+    notifyParent();
+
+    const observer = new MutationObserver(() => notifyParent());
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    window.addEventListener("resize", notifyParent);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", notifyParent);
+    };
+  }, []);
+
   return (
     <div className="abundance-kb-app min-h-screen bg-policy-light">
-      <Header />
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Sidebar Filters */}
@@ -424,55 +449,55 @@ export default function PolicyCMS() {
                 excludedPolicyTypes.length > 0 ||
                 excludedPolicyAreas.length > 0 ||
                 excludedYears.length > 0) && (
-                <div className="flex flex-wrap gap-2">
-                  <span className="text-sm text-muted-foreground self-center">Hidden:</span>
-                  {excludedTypes.map((type) => (
-                    <Badge
-                      key={type}
-                      variant="secondary"
-                      className="bg-red-100 text-red-800 border-red-300"
-                    >
-                      {typeLabels[type as keyof typeof typeLabels]}
-                    </Badge>
-                  ))}
-                  {excludedRegions.map((region) => (
-                    <Badge
-                      key={region}
-                      variant="secondary"
-                      className="bg-red-100 text-red-800 border-red-300"
-                    >
-                      {regionLabels[region as keyof typeof regionLabels]}
-                    </Badge>
-                  ))}
-                  {excludedPolicyTypes.map((policy) => (
-                    <Badge
-                      key={policy}
-                      variant="secondary"
-                      className="bg-red-100 text-red-800 border-red-300"
-                    >
-                      {policyTypeLabels[policy as keyof typeof policyTypeLabels]}
-                    </Badge>
-                  ))}
-                  {excludedPolicyAreas.map((area) => (
-                    <Badge
-                      key={area}
-                      variant="secondary"
-                      className="bg-red-100 text-red-800 border-red-300"
-                    >
-                      {policyAreaLabels[area as keyof typeof policyAreaLabels]}
-                    </Badge>
-                  ))}
-                  {excludedYears.map((year) => (
-                    <Badge
-                      key={year}
-                      variant="secondary"
-                      className="bg-red-100 text-red-800 border-red-300"
-                    >
-                      {year}
-                    </Badge>
-                  ))}
-                </div>
-              )}
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-sm text-muted-foreground self-center">Hidden:</span>
+                    {excludedTypes.map((type) => (
+                      <Badge
+                        key={type}
+                        variant="secondary"
+                        className="bg-red-100 text-red-800 border-red-300"
+                      >
+                        {typeLabels[type as keyof typeof typeLabels]}
+                      </Badge>
+                    ))}
+                    {excludedRegions.map((region) => (
+                      <Badge
+                        key={region}
+                        variant="secondary"
+                        className="bg-red-100 text-red-800 border-red-300"
+                      >
+                        {regionLabels[region as keyof typeof regionLabels]}
+                      </Badge>
+                    ))}
+                    {excludedPolicyTypes.map((policy) => (
+                      <Badge
+                        key={policy}
+                        variant="secondary"
+                        className="bg-red-100 text-red-800 border-red-300"
+                      >
+                        {policyTypeLabels[policy as keyof typeof policyTypeLabels]}
+                      </Badge>
+                    ))}
+                    {excludedPolicyAreas.map((area) => (
+                      <Badge
+                        key={area}
+                        variant="secondary"
+                        className="bg-red-100 text-red-800 border-red-300"
+                      >
+                        {policyAreaLabels[area as keyof typeof policyAreaLabels]}
+                      </Badge>
+                    ))}
+                    {excludedYears.map((year) => (
+                      <Badge
+                        key={year}
+                        variant="secondary"
+                        className="bg-red-100 text-red-800 border-red-300"
+                      >
+                        {year}
+                      </Badge>
+                    ))}
+                  </div>
+                )}
             </div>
 
             {/* Results */}
@@ -568,6 +593,9 @@ export default function PolicyCMS() {
                   })}
                 </div>
 
+                {/* Sentinel for IntersectionObserver */}
+                <div ref={watcherRef}></div>
+
                 {isLoading && (
                   <div className="flex justify-center items-center py-8">
                     <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-accent-purple"></div>
@@ -638,7 +666,7 @@ export default function PolicyCMS() {
               {/* Image */}
               <div className="aspect-video relative overflow-hidden rounded-lg mb-6">
                 {selectedItem.image ? (
-                  <div 
+                  <div
                     className="w-full h-full cursor-pointer group relative"
                     onClick={() => selectedItem.url && window.open(selectedItem.url, '_blank')}
                     title={selectedItem.url ? "Click to open original source" : "No source available"}
@@ -662,7 +690,7 @@ export default function PolicyCMS() {
                     )}
                   </div>
                 ) : (
-                  <div 
+                  <div
                     className="w-full h-full flex items-center justify-center cursor-pointer group relative"
                     style={{ background: selectedItem.gradient }}
                     onClick={() => selectedItem.url && window.open(selectedItem.url, '_blank')}
@@ -784,7 +812,7 @@ export default function PolicyCMS() {
               {/* Action Button */}
               <div className="pt-4 border-t">
                 {selectedItem.url ? (
-                  <Button 
+                  <Button
                     className="w-full bg-accent-purple hover:bg-accent-purple/90 text-white"
                     onClick={() => window.open(selectedItem.url, '_blank')}
                   >
@@ -792,7 +820,7 @@ export default function PolicyCMS() {
                     View Original Source
                   </Button>
                 ) : (
-                  <Button 
+                  <Button
                     className="w-full bg-gray-400 cursor-not-allowed text-white"
                     disabled
                   >
