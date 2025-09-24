@@ -403,8 +403,8 @@ export default function PolicyCMS() {
   }, []);
 
   /* MINDK: Scroll position tracking */
-  const [scrollY, setScrollY] = useState(0):
-  const [parentInnerHeight, setParentInnerHeight] = useState(0):
+  const [scrollY, setScrollY] = useState(0);
+  const [parentInnerHeight, setParentInnerHeight] = useState(0);
     useEffect(() => {
       const handleScroll = () => {
         setScrollY(window.scrollY)
