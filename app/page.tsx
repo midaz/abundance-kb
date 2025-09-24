@@ -80,6 +80,7 @@ const policyAreaColors = {
 }
 
 export default function PolicyCMS() {
+
   const [searchQuery, setSearchQuery] = useState("")
   // Inverted logic: these store EXCLUDED items, not included ones
   const [excludedTypes, setExcludedTypes] = useState<string[]>([])
@@ -323,13 +324,17 @@ export default function PolicyCMS() {
   const openModal = (item: (typeof policyResources)[0]) => {
     setSelectedItem(item)
     setIsModalOpen(true)
-    document.body.style.overflow = "hidden" // Prevent background scrolling
+    document.body.style.overflow = "hidden"
+    /* MINDK: Notify parent of modal open */
+    window.parent.postMessage({ type: "modal-open" }, "*")
   }
 
   const closeModal = () => {
     setIsModalOpen(false)
     setSelectedItem(null)
-    document.body.style.overflow = "unset" // Restore scrolling
+    document.body.style.overflow = "unset"
+    /* MINDK: Notify parent of modal close */
+    window.parent.postMessage({ type: "modal-close" }, "*")
   }
 
   useEffect(() => {
@@ -382,8 +387,35 @@ export default function PolicyCMS() {
     };
   }, []);
 
+  /* MINDK: Listen to scroll position from parent */
+  useEffect(() => {
+    const handleMessage = (event: MessageEvent) => {
+      if (event.data.type === "parent-scroll") {
+        const { scrollY, innerHeight, iframeTop } = event.data;
+        // Scroll position relative to this iframe
+        const relativeScroll = scrollY - iframeTop;
+        setScrollY(relativeScroll + innerHeight / 2);
+        setParentInnerHeight(innerHeight);
+      }
+    };
+    window.addEventListener("message", handleMessage);
+    return () => window.removeEventListener("message", handleMessage);
+  }, []);
+
+  /* MINDK: Scroll position tracking */
+  const [scrollY, setScrollY] = useState(0):
+  const [parentInnerHeight, setParentInnerHeight] = useState(0):
+    useEffect(() => {
+      const handleScroll = () => {
+        setScrollY(window.scrollY)
+      }
+      window.addEventListener("scroll", handleScroll)
+      return () => window.removeEventListener("scroll", handleScroll)
+    }, [])
+
   return (
     <div className="abundance-kb-app min-h-screen bg-policy-light">
+      {/*<Header />*/}
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Sidebar Filters */}
@@ -641,8 +673,16 @@ export default function PolicyCMS() {
           <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={closeModal} />
 
           {/* Modal Content */}
-          <div className="relative bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-            {/* Header */}
+          <div
+            className="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[550px] md:max-h-[800px] overflow-y-auto transition-all ease-in-out duration-300"
+            style={{
+              position: "absolute",
+              top: scrollY < parentInnerHeight / 2 ? `${parentInnerHeight / 2}px` : `${scrollY}px`,
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+
+            }}
+          >
             <div className="sticky top-0 bg-white border-b px-6 py-4 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 {(() => {
