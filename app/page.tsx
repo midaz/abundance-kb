@@ -98,6 +98,7 @@ export default function PolicyCMS() {
 
   const [selectedItem, setSelectedItem] = useState<(typeof policyResources)[0] | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [showFilters, setShowFilters] = useState(false)
 
   const watcherRef = useRef<HTMLDivElement | null>(null);
 
@@ -419,8 +420,8 @@ export default function PolicyCMS() {
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Sidebar Filters */}
-          <aside className="lg:w-80 space-y-6">
-            <Card className="bg-card/95 backdrop-blur-sm">
+          <aside className="lg:w-80 space-y-6 order-2 lg:order-1">
+            <Card className={`hidden lg:block bg-card/95 backdrop-blur-sm`}>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Filter className="w-5 h-5" />
@@ -435,7 +436,7 @@ export default function PolicyCMS() {
                   Select All
                 </Button>
               </CardHeader>
-              <CardContent className="space-y-6">
+              <CardContent className="space-y-6 lg:mt-3">
                 <FilterSection filterType="policyType" />
                 <Separator />
                 <FilterSection filterType="policyArea" />
@@ -450,7 +451,7 @@ export default function PolicyCMS() {
           </aside>
 
           {/* Main Content */}
-          <main className="flex-1">
+          <main className="flex-1 order-1 lg:order-2">
             {/* Search and Sort */}
             <div className="mb-8 space-y-4">
               <div className="flex flex-col sm:flex-row gap-4">
@@ -474,6 +475,48 @@ export default function PolicyCMS() {
                   </SelectContent>
                 </Select>
               </div>
+
+              {/* Mobile/Tablet Filters Toggle (visible below lg) */}
+              <div className="lg:hidden">
+                <Button
+                  variant="outline"
+                  onClick={() => setShowFilters((prev) => !prev)}
+                  className="w-full bg-card/95 backdrop-blur-sm"
+                >
+                  <Filter className="w-4 h-4" /> {showFilters ? 'Hide Filters' : 'Show Filters'}
+                </Button>
+              </div>
+
+              {/* Mobile/Tablet Filters Content (renders below toggle, above results) */}
+              {showFilters && (
+                <Card className="lg:hidden bg-card/95 backdrop-blur-sm">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <Filter className="w-5 h-5" />
+                      Filters
+                    </CardTitle>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={clearAllFilters}
+                      className="w-full bg-transparent hover:bg-accent-purple hover:text-white transition-colors"
+                    >
+                      Select All
+                    </Button>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <FilterSection filterType="policyType" />
+                    <Separator />
+                    <FilterSection filterType="policyArea" />
+                    <Separator />
+                    <FilterSection filterType="region" />
+                    <Separator />
+                    <FilterSection filterType="type" />
+                    <Separator />
+                    <FilterSection filterType="year" sortYears={true} />
+                  </CardContent>
+                </Card>
+              )}
 
               {/* Active Filters (showing excluded items) */}
               {(excludedTypes.length > 0 ||
