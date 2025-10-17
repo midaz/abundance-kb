@@ -392,7 +392,7 @@ export default function PolicyCMS() {
      centered using the fixed flex container. */
 
   return (
-    <div className="abundance-kb-app min-h-screen bg-policy-light">
+    <div className="abundance-kb-app min-h-screen bg-policy-light w-full overflow-x-hidden">
       {/*<Header />*/}
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col lg:flex-row gap-8">
@@ -688,13 +688,13 @@ export default function PolicyCMS() {
       </div>
 
       {isModalOpen && selectedItem && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
           {/* Backdrop */}
           <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={closeModal} />
 
           {/* Modal Content */}
           <div
-            className="relative bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[550px] md:max-h-[800px] overflow-y-auto transition-all ease-in-out duration-300"
+            className="relative bg-white rounded-lg shadow-xl w-full max-w-[calc(100vw-2rem)] sm:max-w-xl md:max-w-3xl lg:max-w-4xl max-h-[80vh] overflow-y-auto transition-all ease-in-out duration-300"
           >
             <div className="sticky top-0 bg-white border-b px-6 py-4 flex items-center justify-between">
               <div className="flex items-center gap-3">
