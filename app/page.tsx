@@ -388,31 +388,8 @@ export default function PolicyCMS() {
     };
   }, []);
 
-  /* MINDK: Listen to scroll position from parent */
-  useEffect(() => {
-    const handleMessage = (event: MessageEvent) => {
-      if (event.data.type === "parent-scroll") {
-        const { scrollY, innerHeight, iframeTop } = event.data;
-        // Scroll position relative to this iframe
-        const relativeScroll = scrollY - iframeTop;
-        setScrollY(relativeScroll + innerHeight / 2);
-        setParentInnerHeight(innerHeight);
-      }
-    };
-    window.addEventListener("message", handleMessage);
-    return () => window.removeEventListener("message", handleMessage);
-  }, []);
-
-  /* MINDK: Scroll position tracking */
-  const [scrollY, setScrollY] = useState(0);
-  const [parentInnerHeight, setParentInnerHeight] = useState(0);
-    useEffect(() => {
-      const handleScroll = () => {
-        setScrollY(window.scrollY)
-      }
-      window.addEventListener("scroll", handleScroll)
-      return () => window.removeEventListener("scroll", handleScroll)
-    }, [])
+  /* MINDK: Removed custom scroll-based centering logic since the modal is now
+     centered using the fixed flex container. */
 
   return (
     <div className="abundance-kb-app min-h-screen bg-policy-light">
@@ -717,14 +694,7 @@ export default function PolicyCMS() {
 
           {/* Modal Content */}
           <div
-            className="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[550px] md:max-h-[800px] overflow-y-auto transition-all ease-in-out duration-300"
-            style={{
-              position: "absolute",
-              top: scrollY < parentInnerHeight / 2 ? `${parentInnerHeight / 2}px` : `${scrollY}px`,
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-
-            }}
+            className="relative bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[550px] md:max-h-[800px] overflow-y-auto transition-all ease-in-out duration-300"
           >
             <div className="sticky top-0 bg-white border-b px-6 py-4 flex items-center justify-between">
               <div className="flex items-center gap-3">
