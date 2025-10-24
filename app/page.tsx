@@ -108,7 +108,8 @@ export default function PolicyCMS() {
         searchQuery === "" ||
         item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+        item.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase())) ||
+        item.author.toLowerCase().includes(searchQuery.toLowerCase())
 
       // Inverted logic: item is shown unless it's excluded
       const matchesType = !excludedTypes.includes(item.type)
@@ -435,7 +436,7 @@ export default function PolicyCMS() {
                 <div className="relative flex-1">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
                   <Input
-                    placeholder="Search resources..."
+                    placeholder="Search resources (title, description, tags, author)..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="pl-10 bg-card/95 backdrop-blur-sm"
