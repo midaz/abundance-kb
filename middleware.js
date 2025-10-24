@@ -2,18 +2,23 @@ import { NextResponse } from 'next/server'
 
 export function middleware(request) {
     const referer = request.headers.get('referer')
-
-    const allowedDomains = [
-        'https://dev-abundance-elected.pantheonsite.io',
-        'https://www.abundancenetwork.com',
-        'https://abundancenetwork.com',
-        'http://localhost:3000',
-        'https://abundanceelected.com/'
-    ]
-
-    const isAllowed = referer && allowedDomains.some(domain =>
-        referer.startsWith(domain)
-    )
+    const { hostname: reqHost } = new URL(request.url)
+    const isAllowed = (() => {
+        try {
+            const { hostname, protocol } = new URL(referer || '')
+            const prodHosts = new Set([
+                'dev-abundance-elected.pantheonsite.io',
+                'www.abundancenetwork.com',
+                'abundancenetwork.com',
+                'abundanceelected.com'
+            ])
+            const isLocal = (h) => h === 'localhost' || h === '127.0.0.1' || h === '::1'
+            return isLocal(reqHost) || isLocal(hostname) || (protocol === 'https:' && prodHosts.has(hostname))
+        } catch {
+            const isLocal = (h) => h === 'localhost' || h === '127.0.0.1' || h === '::1'
+            return isLocal(reqHost)
+        }
+    })()
 
     if (!isAllowed) {
         return new NextResponse(
