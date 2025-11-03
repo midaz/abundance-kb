@@ -19,8 +19,7 @@ export const policyResources: PolicyResource[] = [
     "tags": [
       "land use",
       "financing projects",
-      "innovation in building",
-      "useful to train civic employees on pro-forma & development finance"
+      "innovation in building"
     ],
     "url": "https://ternercenter.berkeley.edu/proforma/",
     "accessibilityScore": "",
@@ -45,8 +44,7 @@ export const policyResources: PolicyResource[] = [
     "tags": [
       "land use",
       "financing projects",
-      "innovation in building",
-      "useful to develop and intuition of how policy impacts housing production"
+      "innovation in building"
     ],
     "url": "https://ternercenter.berkeley.edu/example-cities/",
     "accessibilityScore": "",
@@ -71,8 +69,7 @@ export const policyResources: PolicyResource[] = [
     "tags": [
       "land use",
       "financing projects",
-      "innovation in building",
-      "useful to develop and intuition of how policy impacts housing production"
+      "innovation in building"
     ],
     "url": "https://www.ternercenter.app/demystifying-development-math#simulation",
     "accessibilityScore": "",
@@ -94,8 +91,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2024-01-01",
     "author": "SPUR",
     "tags": [
-      "financing projects",
-      "helpful for designing ballot measures that result in more housing"
+      "financing projects"
     ],
     "url": "https://drive.google.com/file/d/16UUu65rMgCsRqedx39QaiW0QICowxd3x/view?usp=drive_link",
     "accessibilityScore": "",
@@ -118,8 +114,7 @@ export const policyResources: PolicyResource[] = [
     "author": "Urban Institute",
     "tags": [
       "innovation in building",
-      "financing projects",
-      "straightforward explanation of affordable housing finance that can help non-experts better understand trade-offs"
+      "financing projects"
     ],
     "url": "https://apps.urban.org/features/cost-of-affordable-housing/",
     "accessibilityScore": "",
@@ -141,9 +136,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2023-01-01",
     "author": "NYU Furman Center Housing Solutions Lab",
     "tags": [
-      "financing projects",
-      "flexible alternative to legacy finance sources like lihtc",
-      "resulting in increased access to affordable housing"
+      "financing projects"
     ],
     "url": "https://www.localhousingsolutions.org/housing-policy-case-studies/housing-trust-funds-in-ten-localities/",
     "accessibilityScore": "",
@@ -169,8 +162,7 @@ export const policyResources: PolicyResource[] = [
     "tags": [
       "land use",
       "financing projects",
-      "homelessness prevention",
-      "provides guidance on how to better deliver or enhance a housing plan that results in more affordable housing"
+      "homelessness prevention"
     ],
     "url": "https://localhousingsolutions.org/housing-strategy-review/long-version/",
     "accessibilityScore": "",
@@ -194,8 +186,7 @@ export const policyResources: PolicyResource[] = [
     "author": "NYU Furman Center Housing Solutions Lab",
     "tags": [
       "land use",
-      "financing projects",
-      "useful for small teams who may not have access to sophisticated data analysis tools"
+      "financing projects"
     ],
     "url": "https://localhousingsolutions.org/housing-needs-assessment/",
     "accessibilityScore": "",
@@ -219,8 +210,7 @@ export const policyResources: PolicyResource[] = [
     "author": "NYU Furman Center Housing Solutions Lab",
     "tags": [
       "land use",
-      "financing projects",
-      "useful walkthrough of designing a comprehensive housing strategy that can help small/midsize cities coordinate departments and roles"
+      "financing projects"
     ],
     "url": "https://localhousingsolutions.org/build-a-housing-strategy/",
     "accessibilityScore": "",
@@ -242,8 +232,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2025-01-01",
     "author": "NYU Furman Center",
     "tags": [
-      "financing projects",
-      "resource to help policymakers choose the right funding source to unlock greater supply of housing"
+      "financing projects"
     ],
     "url": "https://www.localhousingsolutions.org/fund/",
     "accessibilityScore": "",
@@ -295,8 +284,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2023-01-01",
     "author": "Urban Institute",
     "tags": [
-      "rental / tenant protections",
-      "tool that can help policy makers identify which neighborhoods have the highest need of assistance"
+      "rental / tenant protections"
     ],
     "url": "https://www.urban.org/data-tools/mapping-neighborhoods-highest-risk-housing-instability-and-homelessness",
     "accessibilityScore": "",
@@ -321,8 +309,7 @@ export const policyResources: PolicyResource[] = [
     "tags": [
       "land use",
       "financing projects",
-      "innovation in building",
-      "useful to demonstrate tradeoffs and outcomes of upzoning"
+      "innovation in building"
     ],
     "url": "https://apps.urban.org/features/affordable-housing-shortage-and-zoning/",
     "accessibilityScore": "",
@@ -380,8 +367,7 @@ export const policyResources: PolicyResource[] = [
       "rental / tenant protections",
       "homelessness prevention",
       "homeownership",
-      "land use",
-      "timely research on market dynamics affecting housing that can help local governments adjust their housing strategy to respond to changes in migration and building costs."
+      "land use"
     ],
     "url": "https://drive.google.com/file/d/1DGUlhJvfXkIOp2ctlsX2SbFUy2yByuXT/view?usp=drive_link",
     "accessibilityScore": "",
@@ -403,9 +389,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2025-01-01",
     "author": "Center for Budget and Policy Priorities",
     "tags": [
-      "rental / tenant protections",
-      "helps policy makers visualize what neighborhoods are rely on rental assistance",
-      "which can inform their housing strategy."
+      "rental / tenant protections"
     ],
     "url": "https://www.cbpp.org/research/housing/map-where-households-using-federal-rental-assistance-live",
     "accessibilityScore": "",
@@ -431,9 +415,7 @@ export const policyResources: PolicyResource[] = [
     "tags": [
       "financing projects",
       "cost of building",
-      "land use",
-      "for purchase training on technical aspects of housing development",
-      "higher touch opportunity to train staff"
+      "land use"
     ],
     "url": "https://learning.uli.org/?_gl=1*1n7ufg0*_gcl_au*ODIwMTIxMjQ3LjE3NDg4ODkxNjY.*_ga*MTk1OTkxNjk5OS4xNzQ4ODg5MTY4*_ga_68JJQP7N7N*czE3NDg4OTIzMDYkbzIkZzEkdDE3NDg4OTQ2MDAkajQ4JGwwJGgw",
     "accessibilityScore": "",
@@ -459,8 +441,7 @@ export const policyResources: PolicyResource[] = [
     "tags": [
       "financing projects",
       "rental / tenant protections",
-      "homeownership",
-      "helpful to visualize how neighborhoods have changed over time and inform housing strategy"
+      "homeownership"
     ],
     "url": "https://www.enterprisecommunity.org/learning-center/resources/gentrification-comparison-tool",
     "accessibilityScore": "",
@@ -484,9 +465,7 @@ export const policyResources: PolicyResource[] = [
     "author": "Enterprise Community Partners",
     "tags": [
       "rental / tenant protections",
-      "financing projects",
-      "for appropriate housing markets",
-      "this tool can help policy makers develop skills to preserve rural developments"
+      "financing projects"
     ],
     "url": "https://www.enterprisecommunity.org/learning-center/resources/southeast-rural-rental-preservation-academy",
     "accessibilityScore": "",
@@ -508,8 +487,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2025-01-01",
     "author": "Results For America",
     "tags": [
-      "homelessness prevention",
-      "detailed walk through of how santa clara county set up processes for cross-departmental collaboration and empowered frontline employees to use their discretion to achieve their goals"
+      "homelessness prevention"
     ],
     "url": "https://drive.google.com/file/d/1vnuouTHJoiC1HFuhbLtcHS0SCuU-1s42/view?usp=drive_link",
     "accessibilityScore": "",
@@ -531,9 +509,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2025-01-01",
     "author": "Results For America",
     "tags": [
-      "financing projects",
-      "key offering from results for america",
-      "technical assistance on public spending for policy makers"
+      "financing projects"
     ],
     "url": "https://results4america.org/shifting-dollars-technical-assistance%E2%84%A0/",
     "accessibilityScore": "",
@@ -585,8 +561,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2025-01-01",
     "author": "Smart Growth America",
     "tags": [
-      "land use",
-      "research and guidance to inform whether form based code is a viable option for a jurisdiction. simplified code can ease development process among other benefits"
+      "land use"
     ],
     "url": "https://www.smartgrowthamerica.org/knowledge-hub/resources/what-is-a-form-based-code/",
     "accessibilityScore": "",
@@ -608,8 +583,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2021-01-01",
     "author": "Smart Growth America",
     "tags": [
-      "land use",
-      "research and guidance to inform whether form based code is a viable option for a jurisdiction. simplified code can ease development process among other benefits"
+      "land use"
     ],
     "url": "https://drive.google.com/file/d/1TIblOIgoCsY-3P0KZA7mrz4bXH169RvU/view?usp=drive_link",
     "accessibilityScore": "",
@@ -631,8 +605,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2019-01-01",
     "author": "City of Asheville",
     "tags": [
-      "financing projects",
-      "case example of implementation of bond funds for increeasing supply"
+      "financing projects"
     ],
     "url": "https://drive.google.com/file/d/1Wp0t8jRz__DuIEei-HioB_PBND7prUts/view?usp=drive_link",
     "accessibilityScore": "",
@@ -654,8 +627,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2024-01-01",
     "author": "City of East Grand Rapids",
     "tags": [
-      "financing projects",
-      "guidance around how a housing authority can use tax revenue to produce workforce housing."
+      "financing projects"
     ],
     "url": "https://drive.google.com/file/d/1goQgg8jeXdPiJkkyiLsSTXzUubf7RxUM/view?usp=drive_link",
     "accessibilityScore": "",
@@ -677,8 +649,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2025-01-01",
     "author": "National League of Cities",
     "tags": [
-      "financing projects",
-      "positions housing development finance as a key driver of the gap between supply and demand.  provides several strategies for reducing finance gap and increasing supply of housing."
+      "financing projects"
     ],
     "url": "https://www.nlc.org/resource/filling-the-gap-unlocking-housing-finance-tool/",
     "accessibilityScore": "",
@@ -702,9 +673,7 @@ export const policyResources: PolicyResource[] = [
     "author": "National League of Cities",
     "tags": [
       "rental / tenant protections",
-      "financing projects",
-      "shortages in construction labor are a common barrier to housing supply",
-      "and this toolkit offers ways for electeds to address the disparity."
+      "financing projects"
     ],
     "url": "https://www.nlc.org/resource/healthy-housing-workforce-toolkit/",
     "accessibilityScore": "",
@@ -729,8 +698,7 @@ export const policyResources: PolicyResource[] = [
     "tags": [
       "land use",
       "innovation in building",
-      "financing projects",
-      "detailed guide with advice around zoning reform in service of increasing housing supply."
+      "financing projects"
     ],
     "url": "https://drive.google.com/file/d/1hnLJbwpJ-yvLd5uYgBCpG-kQmStybbFJ/view?usp=drive_link",
     "accessibilityScore": "",
@@ -752,8 +720,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2020-01-01",
     "author": "National League of Cities",
     "tags": [
-      "land use",
-      "electeds can use this tool to build political support for increasing the supply of housing"
+      "land use"
     ],
     "url": "https://www.nlc.org/resource/making-the-case-for-healthy-and-safe-housing-policies-a-messaging-toolkit/",
     "accessibilityScore": "",
@@ -775,11 +742,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2023-01-01",
     "author": "National League of Cities",
     "tags": [
-      "rental / tenant protections",
-      "cities can strengthen their relationship with landlords",
-      "irmproving service delivery",
-      "compliance",
-      "and the quality of their overall housing strategy."
+      "rental / tenant protections"
     ],
     "url": "https://www.nlc.org/resource/landlord-engagement-toolkit/",
     "accessibilityScore": "",
@@ -803,9 +766,7 @@ export const policyResources: PolicyResource[] = [
     "author": "National League of Cities",
     "tags": [
       "rental / tenant protections",
-      "homelessness prevention",
-      "while they're unlocking supply",
-      "cities can use this tool to examine and adjust their programs and policies around eviction."
+      "homelessness prevention"
     ],
     "url": "https://www.nlc.org/resource/local-eviction-prevention-policy-and-program-tool/",
     "accessibilityScore": "",
@@ -829,9 +790,7 @@ export const policyResources: PolicyResource[] = [
     "author": "National League of Cities",
     "tags": [
       "rental / tenant protections",
-      "homelessness prevention",
-      "while they're unlocking supply",
-      "cities can use this tool to examine and adjust their programs and policies around eviction."
+      "homelessness prevention"
     ],
     "url": "https://www.nlc.org/wp-content/uploads/2024/01/Designing-and-Implementing-Local-Eviction-Policies-and-Programs.pdf",
     "accessibilityScore": "",
@@ -855,9 +814,7 @@ export const policyResources: PolicyResource[] = [
     "author": "National League of Cities",
     "tags": [
       "rental / tenant protections",
-      "homelessness prevention",
-      "along with increasing supply",
-      "cities can design rental assistance programs that are more intuitive and responsive to users."
+      "homelessness prevention"
     ],
     "url": "https://www.nlc.org/resource/emergency-rental-assistance-toolkit-how-to-resources-for-equitable-effective-programs/",
     "accessibilityScore": "",
@@ -879,8 +836,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2025-01-01",
     "author": "Land Use Atlas",
     "tags": [
-      "land use",
-      "useful for small teams who may not have access to sophisticated data analysis tools"
+      "land use"
     ],
     "url": "https://www.zoningatlas.org/atlas",
     "accessibilityScore": "",
@@ -902,8 +858,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2023-01-01",
     "author": "Institute of Othering & Belonging  and California Department of Housing and Community Development",
     "tags": [
-      "land use",
-      "policy makers can draw inspiration on zoning refrom from model policies from other cities that have enacted reform using this database."
+      "land use"
     ],
     "url": "https://belonging.berkeley.edu/zoning-reform-tracker",
     "accessibilityScore": "",
@@ -925,9 +880,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2024-01-01",
     "author": "Center for Public Enterprise",
     "tags": [
-      "financing projects",
-      "flexible alternative to legacy finance sources like lihtc",
-      "resulting in increased access to affordable housing"
+      "financing projects"
     ],
     "url": "https://drive.google.com/file/d/1WO-KqoFlFDYRqllVM2d7A98o1BoVZ1Bi/view?usp=drive_link",
     "accessibilityScore": "",
@@ -949,8 +902,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2025-01-01",
     "author": "AEI",
     "tags": [
-      "land use",
-      "policy makers can use this data to evaluate what parts of their jurisdiction might need renovations to remain suitable and prevent substantial decreases in current supply."
+      "land use"
     ],
     "url": "https://heat.aeihousingcenter.org/toolkit/year_built_map",
     "accessibilityScore": "",
@@ -974,8 +926,7 @@ export const policyResources: PolicyResource[] = [
     "author": "AEI",
     "tags": [
       "land use",
-      "homeownership",
-      "policy makers can refer to the data here to inform their housing priorities."
+      "homeownership"
     ],
     "url": "https://www.aei.org/national-and-metro-housing-market-indicators/",
     "accessibilityScore": "",
@@ -999,8 +950,7 @@ export const policyResources: PolicyResource[] = [
     "author": "Housing Narrative Lab",
     "tags": [
       "land use",
-      "homelessness prevention",
-      "region-specific messaging that can help elected leaders build support for increasing supply"
+      "homelessness prevention"
     ],
     "url": "https://drive.google.com/file/u/2/d/1gQzM2Qvz_i9x0ppak6t5FjxtMy98hFGc/view?usp=drive_link",
     "accessibilityScore": "",
@@ -1022,8 +972,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2019-01-01",
     "author": "AARP",
     "tags": [
-      "land use",
-      "brochure helpful for encouraging adu construction"
+      "land use"
     ],
     "url": "https://www.hcd.ca.gov/policy-research/docs/adu-guide-web-singles.pdf",
     "accessibilityScore": "",
@@ -1045,8 +994,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2020-01-01",
     "author": "Institute for Local Government",
     "tags": [
-      "land use",
-      "guidance for productive public deliberation on housing development"
+      "land use"
     ],
     "url": "https://housingtoolkit.ca-ilg.org/",
     "accessibilityScore": "",
@@ -1068,8 +1016,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2023-01-01",
     "author": "Mercatus Center",
     "tags": [
-      "land use",
-      "advice on designing adu policy that yields more housing"
+      "land use"
     ],
     "url": "https://drive.google.com/file/d/1Qe8-k5aXCdKj24_YGx7xQ9QjxucaHaVQ/view?usp=drive_link",
     "accessibilityScore": "",
@@ -1091,8 +1038,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2025-01-01",
     "author": "Housing + Transportation Index",
     "tags": [
-      "land use",
-      "useful mapping tool for policy makers designing transit oriented development plans"
+      "land use"
     ],
     "url": "https://htaindex.cnt.org/map/",
     "accessibilityScore": "",
@@ -1114,9 +1060,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2025-01-01",
     "author": "Policy Map",
     "tags": [
-      "land use",
-      "easy to use data interface",
-      "can assist policy makers with limited data analysis capacity"
+      "land use"
     ],
     "url": "https://www.policymap.com/newmaps/e/www",
     "accessibilityScore": "",
@@ -1160,9 +1104,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2023-01-01",
     "author": "Mercatus Center",
     "tags": [
-      "financing projects",
-      "evidence policymakers can leverage to adjust zoning to enable smaller",
-      "denser housing units."
+      "financing projects"
     ],
     "url": "https://drive.google.com/file/d/1z4UjoIdSCx2-MoMEgKE14rL0bqNFtVjX/view?usp=drive_link",
     "accessibilityScore": "",
@@ -1189,8 +1131,7 @@ export const policyResources: PolicyResource[] = [
       "financing projects",
       "innovation in building",
       "homelessness prevention",
-      "homeownership",
-      "policymakers can use these case studies to draw inspiration for new  approaches to construction and wrap around homelessness services"
+      "homeownership"
     ],
     "url": "https://www.enterprisecommunity.org/sites/default/files/2025-01/The-Case-for-Innovation-in-Housing.pdf",
     "accessibilityScore": "",
@@ -1213,9 +1154,7 @@ export const policyResources: PolicyResource[] = [
     "author": "Tiny Home Industry Association",
     "tags": [
       "innovation in building",
-      "land use",
-      "tiny homes and homes on wheels can be a cost effective way to increase housing supply",
-      "but there are local and state regulations that complicate this strategy. this resource map provides resources for electeds interested in loosening regulations around tiny homes specifically."
+      "land use"
     ],
     "url": "https://tinyhomeindustryassociation.org/map/",
     "accessibilityScore": "",
@@ -1241,8 +1180,7 @@ export const policyResources: PolicyResource[] = [
     "tags": [
       "land use",
       "homeownership",
-      "rental / tenant protections",
-      "understanding how shortage estimates are calculated can provide insight into the state of housing supply."
+      "rental / tenant protections"
     ],
     "url": "https://www.urban.org/sites/default/files/2025-07/Bringing-Housing-Shortage-Into-Sharper-Focus.pdf",
     "accessibilityScore": "",
@@ -1264,8 +1202,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2025-01-01",
     "author": "Mercatus Center",
     "tags": [
-      "land use",
-      "offers tweaks lawmakers can implement to further unencumber adu production."
+      "land use"
     ],
     "url": "https://www.mercatus.org/research/policy-spotlights/avoiding-poison-pills-accessory-dwelling-unit-adu-law",
     "accessibilityScore": "",
@@ -1287,9 +1224,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2012-01-01",
     "author": "RAND",
     "tags": [
-      "land use",
-      "evidence that inclusionary zoning has helped low-income homeowners more than low-income renters",
-      "which can help policy makers make informed decisions about how to structure affordable housing programs or plans that might include inclusionary zoning."
+      "land use"
     ],
     "url": "https://www.rand.org/content/dam/rand/pubs/technical_reports/2012/RAND_TR1231.pdf",
     "accessibilityScore": "",
@@ -1311,9 +1246,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2024-01-01",
     "author": "Terner Center for Housing Innovation and Lewis Center for Regional Policy Studies",
     "tags": [
-      "land use",
-      "this research brief provides parameters for inclusionary zoning that maintain the intention of the policy",
-      "without dampening supply."
+      "land use"
     ],
     "url": "https://drive.google.com/file/d/1lAHpjhFXJRu0A7ZogrYhn0nFmUKCUvza/view",
     "accessibilityScore": "",
@@ -1337,9 +1270,7 @@ export const policyResources: PolicyResource[] = [
     "author": "Terner Center for Housing Innovation",
     "tags": [
       "financing projects",
-      "homelessness prevention",
-      "case example of the advantages of a ministerial approval process",
-      "which is one of the ways governmetns can streamline their permitting processes."
+      "homelessness prevention"
     ],
     "url": "https://ternercenter.berkeley.edu/wp-content/uploads/2021/02/833-Bryant-February-2021.pdf",
     "accessibilityScore": "",
@@ -1383,9 +1314,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2022-01-01",
     "author": "Results for America",
     "tags": [
-      "financing projects",
-      "for cities considering using a land trust to make new housing affordable to residents",
-      "this case study examines the advantages and challenges of this approach."
+      "financing projects"
     ],
     "url": "http://catalog.results4america.org/case-studies/clt-houston",
     "accessibilityScore": "",
@@ -1407,8 +1336,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2020-01-01",
     "author": "Community Solutions",
     "tags": [
-      "homelessness prevention",
-      "example of a city team that asked themselves \"does this red tape need to exist?\" and adjusted accordingly."
+      "homelessness prevention"
     ],
     "url": "https://community.solutions/case-studies/charlotte-mecklenburg-county-north-carolina-reduces-veteran-homelessness-by-30/",
     "accessibilityScore": "",
@@ -1430,9 +1358,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2024-01-01",
     "author": "Community Solutions",
     "tags": [
-      "homelessness prevention",
-      "shortlist of homeless policies that produce results",
-      "based on 10 years of experience in the field."
+      "homelessness prevention"
     ],
     "url": "https://community.solutions/community-solutions-homelessness-policy-recommendations-2/",
     "accessibilityScore": "",
@@ -1454,11 +1380,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2023-01-01",
     "author": "Results for America",
     "tags": [
-      "homelessness prevention",
-      "detailed case study of how the county was able to break down silos",
-      "reduce duplicative work",
-      "consolidate funding streams",
-      "and empower frontline staff to use their expertise and discretion to achieve desired outcomes."
+      "homelessness prevention"
     ],
     "url": "https://catalog.results4america.org/case-studies/homelessness-prevention-system",
     "accessibilityScore": "",
@@ -1480,8 +1402,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2023-01-01",
     "author": "Community Solutions",
     "tags": [
-      "homelessness prevention",
-      "example city leaders can reference in building out a comprehensive homelessness prevention strategy that meets residents' needs."
+      "homelessness prevention"
     ],
     "url": "https://community.solutions/case-studies/how-fairfax-virginia-diverted-74-of-participants-from-homelessness/",
     "accessibilityScore": "",
@@ -1503,8 +1424,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2024-01-01",
     "author": "Regional Plan Association",
     "tags": [
-      "land use",
-      "case examples of cities that have addressed \"missing middle\" housing that electeds can reference to build support for loosening zoning regulation."
+      "land use"
     ],
     "url": "https://rpa.org/work/reports/how-six-cities-are-creating-missing-middle-housing",
     "accessibilityScore": "",
@@ -1524,8 +1444,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2020-01-01",
     "author": "Terner Center for Housing Innovation",
     "tags": [
-      "innovation in building",
-      "electeds can use this resource to evalute the trade offs of development fees and determine if they're appropriately aligned with goals for new housing development"
+      "innovation in building"
     ],
     "url": "https://ternercenter.berkeley.edu/wp-content/uploads/2020/12/Nexus_Studies_November_2020.pdf",
     "accessibilityScore": "",
@@ -1545,8 +1464,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2024-01-01",
     "author": "Center for Building in North America",
     "tags": [
-      "innovation in building",
-      "building-code lever that policy makers can pull to reduce construction costs to increase supply."
+      "innovation in building"
     ],
     "url": "https://admin.centerforbuilding.org/wp-content/uploads/2024/12/Elevatorsexecutivesummary.pdf",
     "accessibilityScore": "",
@@ -1566,8 +1484,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2025-01-01",
     "author": "Pew",
     "tags": [
-      "innovation in building",
-      "building-code lever that policy makers can pull to reduce construction costs to increase supply."
+      "innovation in building"
     ],
     "url": "https://www.pew.org/en/research-and-analysis/reports/2025/02/small-single-stairway-apartment-buildings-have-strong-safety-record",
     "accessibilityScore": "",
@@ -1592,8 +1509,7 @@ export const policyResources: PolicyResource[] = [
     "tags": [
       "land use",
       "financing projects",
-      "innovation in building",
-      "building-code lever that policy makers can pull to reduce construction costs to increase supply."
+      "innovation in building"
     ],
     "url": "https://www.nahb.org/-/media/NAHB/advocacy/docs/state-and-local/how-did-they-do-it.pdf?rev=9476211b36684475b32477aa924d4997&hash=1D35C30D990C50905FC199B49C5CF3B8",
     "accessibilityScore": "",
@@ -1684,8 +1600,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2025-01-01",
     "author": "Harvard's Data-Smart City Solutions",
     "tags": [
-      "financing projects",
-      "example of successful consolidatation of public property for new development"
+      "financing projects"
     ],
     "url": "http://datasmart.hks.harvard.edu/innovating-atlanta-social-housing-model-us",
     "accessibilityScore": "",
@@ -1705,9 +1620,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2022-01-01",
     "author": "City of Scranton",
     "tags": [
-      "innovation in building",
-      "moving permitting online not only increased efficiency",
-      "but also improved the user experience."
+      "innovation in building"
     ],
     "url": "https://scrantonpa.gov/launching-online-permitting-licensing-portal-powered-by-opengov/",
     "accessibilityScore": "",
@@ -1729,8 +1642,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2023-01-01",
     "author": "City of Chicago",
     "tags": [
-      "land use",
-      "describes how one city approached engaging the community to build support for increased density."
+      "land use"
     ],
     "url": "https://www.chicago.gov/city/en/sites/equitable-transit-oriented-development/home/connected-communities-ordinance.html",
     "accessibilityScore": "",
@@ -1753,8 +1665,7 @@ export const policyResources: PolicyResource[] = [
     "author": "Building Salt Lake",
     "tags": [
       "innovation in building",
-      "land use",
-      "helpful for policymakers considering whether or not to take on an adaptive reuse project as a means of unlocking supply"
+      "land use"
     ],
     "url": "https://buildingsaltlake.com/despite-challenges-adaptive-reuse-can-elevate-our-neighborhoods-opinion/",
     "accessibilityScore": "",
@@ -1778,8 +1689,7 @@ export const policyResources: PolicyResource[] = [
     "author": "NYU Furman Center Housing Solutions Lab",
     "tags": [
       "homelessness prevention",
-      "homeownership",
-      "keeping available housing units online is key to building supply."
+      "homeownership"
     ],
     "url": "https://www.localhousingsolutions.org/housing-policy-library/homeowner-rehabilitation-assistance-programs/",
     "accessibilityScore": "",
@@ -1803,8 +1713,7 @@ export const policyResources: PolicyResource[] = [
     "author": "NYU Furman Center Housing Solutions Lab",
     "tags": [
       "rental / tenant protections",
-      "homelessness prevention",
-      "research on how rental registries impact the supply of affordable housing."
+      "homelessness prevention"
     ],
     "url": "http://localhousingsolutions.org/housing-policy-library/rental-registries/",
     "accessibilityScore": "",
@@ -1826,8 +1735,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2024-01-01",
     "author": "Center on Budget and Policy Priorities",
     "tags": [
-      "financing projects",
-      "helpful evidence for policymakers investigating alternative funding structures."
+      "financing projects"
     ],
     "url": "https://www.cbpp.org/research/housing/taxing-very-high-value-home-sales-is-an-equitable-and-effective-strategy-to-raise#:~:text=to%20affordable%20housing.-,Progressive%20real%20estate%20transfer%20taxes%20on%20high%2Dvalue%20homes%20serve,of%20color%20with%20low%20incomes.",
     "accessibilityScore": "",
@@ -1849,8 +1757,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2019-01-01",
     "author": "Terner Center for Housing Innovation",
     "tags": [
-      "land use",
-      "a more flexible zoning tool for policy makers"
+      "land use"
     ],
     "url": "https://drive.google.com/file/d/1irE_aTnoUZ5guXe9AIXJGvqUm787YLwS/view",
     "accessibilityScore": "",
@@ -1875,8 +1782,7 @@ export const policyResources: PolicyResource[] = [
     "tags": [
       "land use",
       "financing projects",
-      "innovation in building",
-      "model approach to density bonuses that incentivize increased development in challenging markets."
+      "innovation in building"
     ],
     "url": "https://abag.ca.gov/sites/default/files/documents/2025-04/Density-Bonus-Model-Program-Guidelines-04162025.pdf",
     "accessibilityScore": "",
@@ -1898,8 +1804,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2024-01-01",
     "author": "Shelterforce",
     "tags": [
-      "land use",
-      "useful evidence for policymakers building support for increased density."
+      "land use"
     ],
     "url": "https://shelterforce.org/2024/12/03/fact-check-new-housing-doesnt-lead-to-overcrowded-schools/#:~:text=Most%20public%2Dschool%20districts%20receive,more%20students%2C%E2%80%9D%20she%20says.",
     "accessibilityScore": "",
@@ -1921,8 +1826,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2024-01-01",
     "author": "Boston Indicators",
     "tags": [
-      "land use",
-      "useful evidence for policymakers building support for increased density."
+      "land use"
     ],
     "url": "https://mbtacommunities.bostonindicators.org/is-new-housing-a-school-budget-buster-what-does-the-research-say-and-why-you-shouldnt-worry-too-much-anyway/",
     "accessibilityScore": "",
@@ -1992,10 +1896,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2025-01-01",
     "author": "Joint Center for Housing Studies of Harvard University",
     "tags": [
-      "financing projects",
-      "in addition an alternative financial structure",
-      "social housing offers an opportunity for cities to design sociable",
-      "inclusive communities."
+      "financing projects"
     ],
     "url": "https://www.jchs.harvard.edu/blog/evolving-landscape-social-housing-new-england-what-we-learned",
     "accessibilityScore": "",
@@ -2392,8 +2293,7 @@ export const policyResources: PolicyResource[] = [
     "author": "Mercatus Center",
     "tags": [
       "land use",
-      "innovation in building",
-      "definitely aligned with housing policy reform in service of greater supply."
+      "innovation in building"
     ],
     "url": "https://www.mercatus.org/housing-policies-highlight#55723654-3005313297",
     "accessibilityScore": "",
@@ -2415,8 +2315,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2025-01-01",
     "author": "Sightline",
     "tags": [
-      "land use",
-      "very useful toolkit for developing messaging with broad appeal."
+      "land use"
     ],
     "url": "https://www.sightline.org/the-pro-homes-messaging-toolkit/",
     "accessibilityScore": "",
@@ -2438,10 +2337,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2025-01-01",
     "author": "Pew",
     "tags": [
-      "land use",
-      "demonstrates that building more homes",
-      "even at market rates",
-      "expands overall supply and helps keep older units affordable."
+      "land use"
     ],
     "url": "https://www.pew.org/en/research-and-analysis/articles/2025/07/31/new-housing-slows-rent-growth-most-for-older-more-affordable-units",
     "accessibilityScore": "",
@@ -2465,9 +2361,7 @@ export const policyResources: PolicyResource[] = [
     "author": "Pew",
     "tags": [
       "land use",
-      "homelessness prevention",
-      "shows that insufficient housing supply drives up costs and increases homelessness",
-      "underscoring the need for abundant housing."
+      "homelessness prevention"
     ],
     "url": "https://www.pew.org/en/research-and-analysis/articles/2023/08/22/how-housing-costs-drive-levels-of-homelessness",
     "accessibilityScore": "",
@@ -2489,8 +2383,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2024-01-01",
     "author": "Pew",
     "tags": [
-      "land use",
-      "highlights how zoning reforms that allow more housing types and density advance abundance and affordability."
+      "land use"
     ],
     "url": "https://www.pew.org/en/research-and-analysis/articles/2024/01/04/minneapolis-land-use-reforms-offer-a-blueprint-for-housing-affordability",
     "accessibilityScore": "",
@@ -2514,9 +2407,7 @@ export const policyResources: PolicyResource[] = [
     "author": "Pew",
     "tags": [
       "land use",
-      "homeownership",
-      "illustrates that loosening restrictive lot-size rules can unlock abundant",
-      "moderately priced homeownership options."
+      "homeownership"
     ],
     "url": "https://www.pew.org/en/research-and-analysis/issue-briefs/2023/09/lot-size-reform-unlocks-affordable-homeownership-in-houston",
     "accessibilityScore": "",
@@ -2538,8 +2429,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2023-01-01",
     "author": "Pew",
     "tags": [
-      "land use",
-      "indicates strong public backing for abundance-oriented policies that make it easier to build."
+      "land use"
     ],
     "url": "https://www.pew.org/en/research-and-analysis/articles/2023/11/30/survey-finds-large-majorities-favor-policies-to-enable-more-housing",
     "accessibilityScore": "",
@@ -2561,8 +2451,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2025-01-01",
     "author": "Pew",
     "tags": [
-      "land use",
-      "establishes a framework for abundance by promoting policies that increase the supply and diversity of homes."
+      "land use"
     ],
     "url": "https://www.pew.org/-/media/assets/2025/09/principles-for-enhancing-housing-availability-and-affordability.pdf",
     "accessibilityScore": "",
@@ -2584,8 +2473,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2024-01-01",
     "author": "Pew & YIMBY Action",
     "tags": [
-      "land use",
-      "suggests that abundance-oriented policymaking is politically viable and can succeed without electoral backlash."
+      "land use"
     ],
     "url": "https://yimbyaction.org/blog/pro-housing-state-lawmakers-have-a-95-re-election-rate/",
     "accessibilityScore": "",
@@ -2607,8 +2495,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2023-01-01",
     "author": "Sightline",
     "tags": [
-      "land use",
-      "enable more and cheaper housing through regulatory reform."
+      "land use"
     ],
     "url": "https://www.sightline.org/series/legalizing-inexpensive-housing/",
     "accessibilityScore": "",
@@ -2630,8 +2517,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2025-01-01",
     "author": "NYU Furman Center for Housing Solutions",
     "tags": [
-      "financing projects",
-      "enables more efficient use of resources to expand housing supply."
+      "financing projects"
     ],
     "url": "https://www.localhousingsolutions.org/policy-insights/navigating-uncertainty-in-federal-funding-streams-for-housing/",
     "accessibilityScore": "",
@@ -2655,10 +2541,7 @@ export const policyResources: PolicyResource[] = [
     "author": "NYU Furman Center for Housing Solutions",
     "tags": [
       "land use",
-      "financing projects",
-      "by activating mission-driven landholders to build affordable homes",
-      "this approach taps underused land for abundant",
-      "community-oriented housing."
+      "financing projects"
     ],
     "url": "https://www.localhousingsolutions.org/housing-policy-library/residential-development-on-faith-owned-land/",
     "accessibilityScore": "",
@@ -2682,8 +2565,7 @@ export const policyResources: PolicyResource[] = [
     "author": "NYU Furman Center for Housing Solutions",
     "tags": [
       "land use",
-      "financing projects",
-      "advances abundance through direct public investment in new homes."
+      "financing projects"
     ],
     "url": "https://www.localhousingsolutions.org/policy-insights/social-housing-and-public-developer-models-in-the-us-and-beyond/",
     "accessibilityScore": "",
@@ -2703,9 +2585,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2023-01-01",
     "author": "NYU Furman Center for Housing Solutions",
     "tags": [
-      "innovation in building",
-      "highlights how manufactured and off-site construction can accelerate housing production and lower costs",
-      "enabling more homes to be built quickly and efficiently."
+      "innovation in building"
     ],
     "url": "https://www.localhousingsolutions.org/housing-policy-case-studies/affordable-manufactured-and-modular-housing-strategies-from-norwood-co-minneapolis-mn-and-halifax-ma/",
     "accessibilityScore": "",
@@ -2727,8 +2607,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2025-01-01",
     "author": "Terner Center",
     "tags": [
-      "land use",
-      "legal reform that has the potential to unblock supply streams."
+      "land use"
     ],
     "url": "https://ternercenter.berkeley.edu/blog/the-financial-impacts-of-construction-defect-liability-on-housing-development-in-california/",
     "accessibilityScore": "",
@@ -2750,8 +2629,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2025-01-01",
     "author": "Urban Institute",
     "tags": [
-      "land use",
-      "promotes smarter regional planning that supports more homes where infrastructure exists."
+      "land use"
     ],
     "url": "https://www.urban.org/research/publication/planning-housing-regional-context",
     "accessibilityScore": "",
@@ -2773,8 +2651,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2025-01-01",
     "author": "Urban Institute",
     "tags": [
-      "land use",
-      "identifies state policies that remove barriers and make it easier to build more homes."
+      "land use"
     ],
     "url": "https://www.urban.org/research/publication/advancing-pro-housing-land-use-policy-state-level",
     "accessibilityScore": "",
@@ -2796,9 +2673,7 @@ export const policyResources: PolicyResource[] = [
     "date": "2025-01-01",
     "author": "Urban Institute",
     "tags": [
-      "land use",
-      "target-setting can catalyze more housing construction in places where it is most needed",
-      "boosting overall supply."
+      "land use"
     ],
     "url": "https://www.urban.org/sites/default/files/2025-09/Final_Addressing_Housing_Supply_Challenges_through_Target_Setting.pdf",
     "accessibilityScore": "",

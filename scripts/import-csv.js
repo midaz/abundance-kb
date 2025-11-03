@@ -69,14 +69,11 @@ function importCSV(csvPath) {
     const mappedPolicyAreas = policyAreas.map(area => getPolicyAreaMapping(area)).filter(area => area);
     const primaryPolicyArea = mappedPolicyAreas[0] || 'landuse';
 
-    // Create tags from policy areas and strengths
+    // Create tags from policy areas only (exclude strengths)
     const tags = [];
     policyAreas.forEach(area => {
       if (area) tags.push(area.toLowerCase());
     });
-    if (strengths) {
-      tags.push(...strengths.split(',').map(s => s.trim().toLowerCase()).filter(s => s));
-    }
     // Remove duplicates and limit to 5 tags
     const uniqueTags = [...new Set(tags)].slice(0, 5);
 
