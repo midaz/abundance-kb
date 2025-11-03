@@ -428,8 +428,8 @@ export default function PolicyCMS() {
                 </Button>
               </CardHeader>
               <CardContent className="space-y-6 lg:mt-3">
-                <FilterSection filterType="policyType" />
-                <Separator />
+                {/* <FilterSection filterType="policyType" /> */}
+                {/* <Separator /> */}
                 <FilterSection filterType="policyArea" />
                 <Separator />
                 <FilterSection filterType="region" />
@@ -496,8 +496,8 @@ export default function PolicyCMS() {
                     </Button>
                   </CardHeader>
                   <CardContent className="space-y-6">
-                    <FilterSection filterType="policyType" />
-                    <Separator />
+                    {/* <FilterSection filterType="policyType" /> */}
+                    {/* <Separator /> */}
                     <FilterSection filterType="policyArea" />
                     <Separator />
                     <FilterSection filterType="region" />
@@ -860,7 +860,7 @@ export default function PolicyCMS() {
                         {regionLabels[selectedItem.region as keyof typeof regionLabels]}
                       </button>
                     </div>
-                    <div className="flex justify-between">
+                    {/* <div className="flex justify-between">
                       <span className="text-gray-600">Policy Type:</span>
                       <button
                         type="button"
@@ -870,7 +870,7 @@ export default function PolicyCMS() {
                       >
                         {policyTypeLabels[selectedItem.policyType as keyof typeof policyTypeLabels]}
                       </button>
-                    </div>
+                    </div> */}
                     <div className="flex justify-between">
                       <span className="text-gray-600">Policy Area:</span>
                       <span className="text-right">
