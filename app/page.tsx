@@ -339,6 +339,19 @@ export default function PolicyCMS() {
     window.parent.postMessage({ type: "modal-close" }, "*")
   }
 
+  const applySingleFilter = (filterType: keyof typeof filterConfig, value: string) => {
+    const config = filterConfig[filterType]
+    if (!config) return
+    const nextExcluded = config.options.filter((opt) => opt !== value)
+    config.setter(nextExcluded)
+    closeModal()
+  }
+
+  const handleClickAuthor = (author: string) => {
+    setSearchQuery(author)
+    closeModal()
+  }
+
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape" && isModalOpen) {
@@ -558,7 +571,7 @@ export default function PolicyCMS() {
               <>
                 <div className="mb-6">
                   <p className="text-muted-foreground">
-                    Showing {displayedItems.length} of {filteredContent.length} resource
+                    Showing {filteredContent.length} resource
                     {filteredContent.length !== 1 ? "s" : ""}
                   </p>
                 </div>
@@ -783,15 +796,52 @@ export default function PolicyCMS() {
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
                       <span className="text-gray-600">Author:</span>
-                      <span className="text-gray-900">{selectedItem.author}</span>
+                      <span className="text-right text-gray-900">
+                        {selectedItem.author
+                          .split(/,| and /i)
+                          .map((a) => a.trim())
+                          .filter(Boolean)
+                          .map((a, idx, arr) => (
+                            <span key={`${a}-${idx}`}>
+                              <button
+                                type="button"
+                                className="text-accent-purple hover:underline focus:underline focus:outline-none"
+                                aria-label={`Search by author ${a}`}
+                                onClick={() => handleClickAuthor(a)}
+                              >
+                                {a}
+                              </button>
+                              {idx < arr.length - 1 && <span className="text-gray-400">, </span>}
+                            </span>
+                          ))}
+                      </span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-600">Date:</span>
-                      <span className="text-gray-900">{selectedItem.date.split('-')[0]}</span>
+                      {(() => {
+                        const year = selectedItem.date.split('-')[0]
+                        return (
+                          <button
+                            type="button"
+                            className="text-accent-purple hover:underline focus:underline focus:outline-none"
+                            aria-label={`Filter by year ${year}`}
+                            onClick={() => applySingleFilter('year', year)}
+                          >
+                            {year}
+                          </button>
+                        )
+                      })()}
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-600">Type:</span>
-                      <span className="text-gray-900">{typeLabels[selectedItem.type as keyof typeof typeLabels]}</span>
+                      <button
+                        type="button"
+                        className="text-accent-purple hover:underline focus:underline focus:outline-none text-right"
+                        aria-label={`Filter by type ${typeLabels[selectedItem.type as keyof typeof typeLabels]}`}
+                        onClick={() => applySingleFilter('type', selectedItem.type)}
+                      >
+                        {typeLabels[selectedItem.type as keyof typeof typeLabels]}
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -801,24 +851,43 @@ export default function PolicyCMS() {
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
                       <span className="text-gray-600">Region:</span>
-                      <span className="text-gray-900">
+                      <button
+                        type="button"
+                        className="text-accent-purple hover:underline focus:underline focus:outline-none text-right"
+                        aria-label={`Filter by region ${regionLabels[selectedItem.region as keyof typeof regionLabels]}`}
+                        onClick={() => applySingleFilter('region', selectedItem.region)}
+                      >
                         {regionLabels[selectedItem.region as keyof typeof regionLabels]}
-                      </span>
+                      </button>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-600">Policy Type:</span>
-                      <span className="text-gray-900">
-                        {policyTypeLabels[selectedItem.policyType as keyof typeof policyTypeLabels]}
-                      </span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Policy Area:</span>
-                      <Badge
-                        variant="outline"
-                        className={`text-xs ${policyAreaColors[selectedItem.policyArea as keyof typeof policyAreaColors]}`}
+                      <button
+                        type="button"
+                        className="text-accent-purple hover:underline focus:underline focus:outline-none text-right"
+                        aria-label={`Filter by policy type ${policyTypeLabels[selectedItem.policyType as keyof typeof policyTypeLabels]}`}
+                        onClick={() => applySingleFilter('policyType', selectedItem.policyType)}
                       >
-                        {policyAreaLabels[selectedItem.policyArea as keyof typeof policyAreaLabels]}
-                      </Badge>
+                        {policyTypeLabels[selectedItem.policyType as keyof typeof policyTypeLabels]}
+                      </button>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">Policy Area:</span>
+                      <span className="text-right">
+                        {selectedItem.policyAreas.map((area, idx) => (
+                          <span key={`${area}-${idx}`}>
+                            <button
+                              type="button"
+                              className="text-accent-purple hover:underline focus:underline focus:outline-none"
+                              aria-label={`Filter by policy area ${policyAreaLabels[area as keyof typeof policyAreaLabels]}`}
+                              onClick={() => applySingleFilter('policyArea', area)}
+                            >
+                              {policyAreaLabels[area as keyof typeof policyAreaLabels]}
+                            </button>
+                            {idx < selectedItem.policyAreas.length - 1 && <span className="text-gray-400">, </span>}
+                          </span>
+                        ))}
+                      </span>
                     </div>
                   </div>
                 </div>
