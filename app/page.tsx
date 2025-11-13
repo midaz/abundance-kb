@@ -102,6 +102,14 @@ export default function PolicyCMS() {
 
   const watcherRef = useRef<HTMLDivElement | null>(null);
 
+  // Derive facet options from dataset so sidebar only shows values that exist
+  const dataDerivedOptions = useMemo(() => {
+    const types = Array.from(new Set(policyResources.map((i) => i.type)))
+    const regions = Array.from(new Set(policyResources.map((i) => i.region)))
+    const policyAreas = Array.from(new Set(policyResources.flatMap((i) => i.policyAreas)))
+    return { types, regions, policyAreas }
+  }, [])
+
   const filteredContent = useMemo(() => {
     const filtered = policyResources.filter((item) => {
       const matchesSearch =
@@ -210,7 +218,7 @@ export default function PolicyCMS() {
     type: {
       setter: setExcludedTypes,
       excluded: excludedTypes,
-      options: Object.keys(typeLabels),
+      options: dataDerivedOptions.types,
       labels: typeLabels,
       icon: FileText,
       title: "Content Type"
@@ -218,7 +226,7 @@ export default function PolicyCMS() {
     region: {
       setter: setExcludedRegions,
       excluded: excludedRegions,
-      options: Object.keys(regionLabels),
+      options: dataDerivedOptions.regions,
       labels: regionLabels,
       icon: MapPin,
       title: "Region"
@@ -234,7 +242,7 @@ export default function PolicyCMS() {
     policyArea: {
       setter: setExcludedPolicyAreas,
       excluded: excludedPolicyAreas,
-      options: Object.keys(policyAreaLabels),
+      options: dataDerivedOptions.policyAreas,
       labels: policyAreaLabels,
       icon: Building,
       title: "Policy Area"
