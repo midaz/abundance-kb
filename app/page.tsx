@@ -352,6 +352,11 @@ export default function PolicyCMS() {
     closeModal()
   }
 
+  const handleClickTag = (tag: string) => {
+    setSearchQuery(tag)
+    closeModal()
+  }
+
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape" && isModalOpen) {
@@ -898,9 +903,17 @@ export default function PolicyCMS() {
                 <h3 className="font-semibold text-gray-900 mb-2">Tags</h3>
                 <div className="flex flex-wrap gap-2">
                   {selectedItem.tags.map((tag) => (
-                    <Badge key={tag} variant="outline" className="text-xs">
-                      {tag}
-                    </Badge>
+                    <button
+                      key={tag}
+                      type="button"
+                      className="focus:outline-none"
+                      aria-label={`Filter by tag ${tag}`}
+                      onClick={() => handleClickTag(tag)}
+                    >
+                      <Badge variant="outline" className="text-xs cursor-pointer hover:bg-accent-purple/10 hover:border-accent-purple">
+                        {tag}
+                      </Badge>
+                    </button>
                   ))}
                 </div>
               </div>
