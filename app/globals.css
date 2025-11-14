@@ -151,9 +151,9 @@
 
 /* Custom breakpoints matching Bricks WordPress */
 @theme {
-  --breakpoint-sm: 29.875rem; /* 478px - Mobile portrait */
-  --breakpoint-md: 48rem; /* 768px - Mobile landscape */
-  --breakpoint-lg: 62rem; /* 992px - Tablet portrait */
+  @screen sm 29.875rem;
+  @screen md 48rem;
+  @screen lg 62rem;
 }
 
 @layer base {
