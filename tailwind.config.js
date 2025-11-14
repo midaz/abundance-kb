@@ -1,10 +1,13 @@
+import { X } from 'lucide-react';
+
 /** @type {import('tailwindcss').Config} */
 export default {
-    theme: {
+    ___theme: {
         screens: {
             sm: "478px",
             md: "768px",
-            lg: "992px"
+            lg: "992px",
+            xl: "1164px",
         },
     },
 }
