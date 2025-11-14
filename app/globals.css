@@ -152,8 +152,7 @@
 @theme {
   --breakpoint-sm: 478px;
   --breakpoint-md: 768px;
-  --breakpoint-lg: 768px;
-  --breakpoint-xl: 1280px;
+  --breakpoint-lg: 1024px;
 }
 
 @layer base {
@@ -258,4 +257,9 @@
     animation: wave 3s ease-in-out infinite;
     transform-origin: left center;
   }
+}
+
+.container {
+  width: 100% !important;
+  max-width: 1164px !important;
 }
