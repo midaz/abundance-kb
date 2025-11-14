@@ -149,6 +149,13 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* Custom breakpoints matching Bricks WordPress */
+@theme {
+  --breakpoint-sm: 29.875rem; /* 478px - Mobile portrait */
+  --breakpoint-md: 48rem; /* 768px - Mobile landscape */
+  --breakpoint-lg: 62rem; /* 992px - Tablet portrait */
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -166,17 +173,35 @@
 
   /* TT Hoves Pro Font Family - Scoped for WordPress safety */
   .font-hoves {
-    font-family: "TT Hoves Pro", "Inter", var(--font-inter), system-ui, -apple-system, sans-serif;
+    font-family:
+      "TT Hoves Pro",
+      "Inter",
+      var(--font-inter),
+      system-ui,
+      -apple-system,
+      sans-serif;
   }
 
   /* TT Hoves Pro Condensed Font Family */
   .font-hoves-condensed {
-    font-family: "TT Hoves Pro Condensed", "Inter", var(--font-inter), system-ui, -apple-system, sans-serif;
+    font-family:
+      "TT Hoves Pro Condensed",
+      "Inter",
+      var(--font-inter),
+      system-ui,
+      -apple-system,
+      sans-serif;
   }
 
   /* WordPress-safe scoped container for font isolation */
   .abundance-kb-app {
-    font-family: "TT Hoves Pro", "Inter", var(--font-inter), system-ui, -apple-system, sans-serif;
+    font-family:
+      "TT Hoves Pro",
+      "Inter",
+      var(--font-inter),
+      system-ui,
+      -apple-system,
+      sans-serif;
   }
 
   .abundance-kb-app * {
@@ -214,7 +239,8 @@
 
   /* Flag waving animation */
   @keyframes wave {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateX(0) scaleX(1);
     }
     25% {
