@@ -2749,5 +2749,79 @@ export const policyResources: PolicyResource[] = [
     "abundanceAlignment": "",
     "strengths": "",
     "gradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
+  },
+  {
+    "id": 121,
+    "title": "Abundance Housing Quick Start Guide",
+    "description": "A scanable guide to Abundant-aligned housing policies.",
+    "type": "guide",
+    "region": "national",
+    "policyType": "housing",
+    "policyArea": "landuse",
+    "policyAreas": [
+      "landuse",
+      "financing",
+      "homelessness"
+    ],
+    "date": "2025-01-01",
+    "author": "Abundance Network",
+    "tags": [
+      "land use",
+      "financing projects",
+      "innovation in building",
+      "homelessness prevention"
+    ],
+    "url": "https://docs.google.com/document/d/17h1Pi74KtgyYiEvcBeInJbJQ7ElAh3a9IGMObf9zS_I/edit?usp=sharing",
+    "accessibilityScore": "",
+    "abundanceAlignment": "Unlock Supply",
+    "strengths": "",
+    "gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+  },
+  {
+    "id": 122,
+    "title": "Incentives in Housing Series",
+    "description": "Podcast series that examines misaligned incentives in housing policy, including building codes and zoning.",
+    "type": "news",
+    "region": "national",
+    "policyType": "housing",
+    "policyArea": "landuse",
+    "policyAreas": [
+      "landuse",
+      "homeownership"
+    ],
+    "date": "2025-01-01",
+    "author": "UCLA Lewis Center",
+    "tags": [
+      "land use",
+      "innovation in building",
+      "homeownership"
+    ],
+    "url": "https://www.lewis.ucla.edu/programs/housing/ucla-housing-voice-podcast/incentives/",
+    "accessibilityScore": "",
+    "abundanceAlignment": "Unlock Supply",
+    "strengths": "",
+    "gradient": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
+  },
+  {
+    "id": 123,
+    "title": "Supply Skepticism Revisited",
+    "description": "Empirical evidence around the stablizing effect of adding new supply on housing prices.",
+    "type": "brief",
+    "region": "national",
+    "policyType": "housing",
+    "policyArea": "landuse",
+    "policyAreas": [
+      "landuse"
+    ],
+    "date": "2025-01-01",
+    "author": "NYU Law & Economic Research",
+    "tags": [
+      "land use"
+    ],
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4629628",
+    "accessibilityScore": "",
+    "abundanceAlignment": "Unlock Supply",
+    "strengths": "",
+    "gradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
   }
 ]
