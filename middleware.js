@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 
+  // Enable auth for local development and Pantheon production
 export function middleware(request) {
     const referer = request.headers.get('referer')
     const { hostname: reqHost } = new URL(request.url)
